@@ -1,0 +1,272 @@
+.rotating-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.rotating-card {
+  width: 100%;
+  max-width: 22rem;
+  min-height: 22rem;
+}
+
+.rotating-card-content {
+  width: 100%;
+  min-height: 22rem;
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+}
+
+/* Background image layer */
+.rotating-card-bg-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+}
+
+/* Decorative circles */
+.rotating-card-decor-circle-1 {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  width: 8rem;
+  height: 8rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.rotating-card-decor-circle-2 {
+  position: absolute;
+  bottom: -1.5rem;
+  left: -1.5rem;
+  width: 6rem;
+  height: 6rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+/* Decorative line */
+.rotating-card-decor-line {
+  position: absolute;
+  top: 0;
+  right: 5rem;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+/* Inner content */
+.rotating-card-inner {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 22rem;
+}
+
+/* Color variants */
+.rotating-card-color-primary {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6, #60a5fa);
+  color: #ffffff;
+}
+
+.rotating-card-color-secondary {
+  background: linear-gradient(135deg, #064e3b, #10b981, #34d399);
+  color: #ffffff;
+}
+
+.rotating-card-color-accent {
+  background: linear-gradient(135deg, #7fb8d8, #a8d4ea, #bde0f0);
+  color: #1a2a3a;
+}
+
+.rotating-card-color-purple {
+  background: linear-gradient(135deg, #4c1d95, #8b5cf6, #a78bfa);
+  color: #ffffff;
+}
+
+.rotating-card-color-energy {
+  background: linear-gradient(135deg, #065f46, #059669, #34d399);
+  color: #ffffff;
+}
+
+.rotating-card-color-tech {
+  background: linear-gradient(135deg, #4c1d95, #6366f1, #ec4899);
+  color: #ffffff;
+}
+
+/* Badge */
+.rotating-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rotating-card-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.rotating-card-tagline {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-top: 0.375rem;
+}
+
+.rotating-card-snippet {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+
+/* Link */
+.rotating-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.rotating-card-link:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.rotating-card-link-arrow {
+  transition: transform 0.3s ease;
+}
+
+.rotating-card-link:hover .rotating-card-link-arrow {
+  transform: translateX(3px);
+}
+
+/* Progress dots */
+.rotating-card-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rotating-card-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background: #d1d5db;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
+.rotating-card-dot.active {
+  width: 1.75rem;
+  border-radius: 0.25rem;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+}
+
+/* Light card overrides (Sailbot accent) */
+.rotating-card-color-accent .rotating-card-badge {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.06);
+  color: #1a2a3a;
+}
+
+.rotating-card-color-accent .rotating-card-tagline {
+  opacity: 0.7;
+}
+
+.rotating-card-color-accent .rotating-card-snippet {
+  opacity: 0.6;
+  color: #1a2a3a;
+}
+
+.rotating-card-color-accent .rotating-card-link {
+  color: #1a2a3a;
+  background: rgba(0, 0, 0, 0.07);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.rotating-card-color-accent .rotating-card-link:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.rotating-card-color-accent .rotating-card-decor-circle-1 {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.rotating-card-color-accent .rotating-card-decor-circle-2 {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.rotating-card-color-accent .rotating-card-decor-line {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05), transparent);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .rotating-card-container {
+    margin-top: 1rem;
+  }
+
+  .rotating-card {
+    max-width: 20rem;
+    min-height: 20rem;
+  }
+
+  .rotating-card-content {
+    min-height: 20rem;
+  }
+
+  .rotating-card-inner {
+    min-height: 20rem;
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .rotating-card {
+    max-width: 100%;
+    min-height: 19rem;
+  }
+
+  .rotating-card-content {
+    min-height: 19rem;
+  }
+
+  .rotating-card-inner {
+    min-height: 19rem;
+    padding: 1.5rem;
+  }
+
+  .rotating-card-title {
+    font-size: 1.5rem;
+  }
+}

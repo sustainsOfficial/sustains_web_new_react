@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import {
-  Brain,
-  Leaf,
   BarChart3,
   Zap,
   Shield,
   Globe,
   ArrowRight,
   CheckCircle,
-  Star,
   TrendingUp,
-  Rocket,
   X,
+  ExternalLink,
+  Wallet,
+  BatteryCharging,
+  Users,
+  Plane,
 } from "lucide-react";
+import Hero from "../shared/Hero";
+import SectionHeader from "../shared/SectionHeader";
+import CTASection from "../shared/CTASection";
 import "./index.css";
 
 class Products extends Component {
@@ -59,6 +63,12 @@ class Products extends Component {
           text: "productpage-text-accent",
           bg: "productpage-bg-accent-10",
         };
+      case "purple":
+        return {
+          gradient: "productpage-from-purple-80",
+          text: "productpage-text-purple",
+          bg: "productpage-bg-purple-10",
+        };
       default:
         return {
           gradient: "productpage-from-primary-80",
@@ -69,48 +79,103 @@ class Products extends Component {
   };
 
   render() {
-    const simpleProducts = [
+    const products = [
       {
-        id: "sandbox",
-        name: "Sandbox",
-        icon: <TrendingUp size={32} />,
+        id: "nidhi",
+        name: "Nidhi",
+        icon: <Wallet size={32} />,
         image:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-        description: "Wealth Management Analytics",
+        description: "API Platform for Wealth Management",
+        tagline: "AI-Powered Portfolio Intelligence for a Sustainable Future",
         details: {
-          subtitle: "Wealth Management Analytics",
+          subtitle: "Wealth Management API Platform",
           content:
-            "A dynamic platform designed for investors and advisors to analyze, monitor, and optimize multi-asset portfolios. Sandbox brings clarity to performance, risk, and rebalancing through AI-assisted insights and real-time diagnostics.",
+            "Nidhi is an AI-powered API platform built for wealth management companies. It offers comprehensive portfolio analytics, risk profiling, rebalancing, and reporting through a robust API layer. Designed for financial advisors, mutual fund distributors, and fintech platforms seeking to integrate intelligent wealth management capabilities.",
+          features: [
+            "Risk profiling with VaR, CVaR & Monte Carlo simulations",
+            "AI-powered portfolio analytics and rebalancing",
+            "Goal-based SIP planning with multiple scenarios",
+            "Automated PDF report generation",
+            "Revenue tracking for mutual fund distributors",
+            "40+ API endpoints with 300 req/min rate limit",
+          ],
         },
+        url: "https://www.sustains.in",
+        docsUrl: "https://www.sustains.co/docs",
         color: "primary",
       },
       {
-        id: "vector",
-        name: "Vector",
-        icon: <Zap size={32} />,
+        id: "nudge",
+        name: "Nudge",
+        icon: <BatteryCharging size={32} />,
         image:
           "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-        description: "Energy Asset Portfolios",
+        description: "End-to-End Energy Management",
+        tagline: "Accelerate Your Energy Deals",
         details: {
-          subtitle: "Energy Asset Portfolios",
+          subtitle: "Energy BD CRM Platform",
           content:
-            "Purpose-built for Utility developers and investors, Vector transforms static project data into actionable portfolio intelligence—featuring IRR tracking, PPA analysis, degradation modeling, scenario planning etc.",
+            "Nudge is an end-to-end energy management solution purpose-built for energy business development teams. It is an operating system built for MW, stages, and bankability — not tickets. From global project tracking and smart pipeline management to solar analysis with NREL integration, Nudge powers energy teams to close deals faster.",
+          features: [
+            "Global project tracking across multiple countries",
+            "AI-powered pipeline management and forecasting",
+            "Solar site analysis via NREL PVWatts API",
+            "IRR, NPV, ROI & payback period calculations",
+            "Deal risk identification and BD strategy recommendations",
+            "Enterprise-grade security with role-based access",
+          ],
         },
+        url: "https://www.ishalab.io",
         color: "secondary",
       },
       {
-        id: "emerging",
-        name: "Emerging Sector Solutions",
-        icon: <Rocket size={32} />,
+        id: "sailbot",
+        name: "Sailbot",
+        icon: <Users size={32} />,
         image:
-          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-        description: "Next-Generation Analytics",
+          "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+        description: "CRM for Focused Teams",
+        tagline: "A Calm CRM Workspace for Focused Teams",
         details: {
-          subtitle: "Next-Generation Analytics",
+          subtitle: "Your CRM, Simplified",
           content:
-            "Active development of next-gen analytics platforms tailored to real estate, infrastructure, and logistics portfolios. These tools will support strategy through economic modelling, asset lifecycle analysis, and sustainability integration across traditionally underserved sectors.",
+            "Sailbot is a calm, distraction-free CRM workspace designed for focused teams. With AI-powered insights, seamless client management, and revenue tracking in one place, Sailbot helps teams manage prospects, pipeline, and growth without the noise of bloated enterprise CRMs.",
+          features: [
+            "AI-powered email templates with tone selection",
+            "Visual sales pipeline with drag-to-reorder stages",
+            "Client lifecycle management (Prospect → Active → Inactive)",
+            "Marketing ROI dashboard by lead source",
+            "Webhook-based enquiry intake from website forms",
+            "Bulk CSV import/export with template support",
+          ],
         },
+        url: "https://www.sailbot.ai",
         color: "accent",
+      },
+      {
+        id: "azyro",
+        name: "Azyro",
+        icon: <Plane size={32} />,
+        image:
+          "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+        description: "Tour Management Platform",
+        tagline: "Tour Management, Made Simple",
+        details: {
+          subtitle: "Purpose-Built for Tour Operators",
+          content:
+            "Azyro is an end-to-end travel tech platform designed exclusively for tour operators — whether solo, a small team, or a large agency. Not another generic CRM, but a purpose-built solution to manage bookings, customers, itineraries, and finances with simplicity and affordability.",
+          features: [
+            "Smart booking management with real-time tracking",
+            "Departure management with capacity & profitability monitoring",
+            "Professional itinerary builder",
+            "Financial analytics with revenue & expense dashboards",
+            "Customer CRM with detailed profiles and history",
+            "Secure document management for contracts & vouchers",
+          ],
+        },
+        url: "https://www.azyro.co",
+        color: "purple",
       },
     ];
 
@@ -118,7 +183,7 @@ class Products extends Component {
       {
         icon: <Shield size={24} />,
         title: "Enterprise Security",
-        description: "Bank-level encryption and SOC 2 compliance",
+        description: "Bank-level encryption and SOC 2 compliance across all products",
       },
       {
         icon: <Globe size={24} />,
@@ -128,95 +193,40 @@ class Products extends Component {
       {
         icon: <Zap size={24} />,
         title: "Real-time Processing",
-        description: "Process millions of data points in real-time",
+        description: "Live data integration and instant insights",
       },
       {
         icon: <TrendingUp size={24} />,
-        title: "Advanced Analytics",
-        description: "ML-powered insights and predictive modeling",
+        title: "AI-Powered Analytics",
+        description: "ML-powered insights and predictive modeling in every product",
       },
     ];
 
     return (
       <div className="productpage-container">
-        {/* Hero Section */}
-        <section className="productpage-hero-section">
-          <div className="productpage-hero-wrapper">
-            <div className="productpage-hero-content">
-              <div className="productpage-hero-badge">
-                <BarChart3 size={16} />
-                <span className="productpage-hero-badge-text">
-                  AI-Powered Solutions
-                </span>
-              </div>
-
-              <h1 className="productpage-hero-title">
-                <span className="productpage-hero-title-main">
-                  AI-Powered Portfolio Intelligence
-                </span>
-                <span className="productpage-hero-title-gradient">
-                  for Multiple Sectors
-                </span>
-              </h1>
-
-              <p className="productpage-hero-description">
-                Transform your organization with our suite of AI-powered
-                portfolio intelligence products. Each solution is designed to
-                deliver measurable performance impact while driving sustainable
-                value across wealth, energy, and infrastructure sectors.
-              </p>
-
-              {/* <div className="productpage-hero-stats">
-                <div className="productpage-hero-stat">
-                  <div className="productpage-hero-stat-number productpage-hero-stat-primary">
-                    3
-                  </div>
-                  <div className="productpage-hero-stat-label">
-                    Core Products
-                  </div>
-                </div>
-                <div className="productpage-hero-stat">
-                  <div className="productpage-hero-stat-number productpage-hero-stat-secondary">
-                    500+
-                  </div>
-                  <div className="productpage-hero-stat-label">
-                    Portfolio Assets
-                  </div>
-                </div>
-                <div className="productpage-hero-stat">
-                  <div className="productpage-hero-stat-number productpage-hero-stat-accent">
-                    45%
-                  </div>
-                  <div className="productpage-hero-stat-label">
-                    Avg. Efficiency Gain
-                  </div>
-                </div>
-                <div className="productpage-hero-stat">
-                  <div className="productpage-hero-stat-number productpage-hero-stat-purple">
-                    99.9%
-                  </div>
-                  <div className="productpage-hero-stat-label">Uptime</div>
-                </div>
-              </div> */}
-            </div>
-          </div>
-        </section>
+        {/* Hero */}
+        <Hero
+          badge={{ icon: <BarChart3 size={16} />, text: "Our Product Suite" }}
+          titleMain="Purpose-Built Products"
+          titleGradient="Across Multiple Verticals"
+          description="From wealth management APIs to energy deal management, CRM workspaces to tour operator platforms — we build focused, AI-powered products that solve real problems in their respective industries."
+        />
 
         {/* Main Products Section */}
         <section className="productpage-simple-section">
           <div className="productpage-simple-wrapper">
             <div className="productpage-simple-header">
               <h2 className="productpage-simple-title">
-                Our <span className="productpage-title-gradient">Products</span>
+                Our{" "}
+                <span className="productpage-title-gradient">Products</span>
               </h2>
               <p className="productpage-simple-subtitle">
-                Innovative AI-powered solutions for comprehensive portfolio
-                intelligence across multiple sectors
+                Four specialized platforms, each purpose-built for its industry
               </p>
             </div>
 
-            <div className="productpage-simple-grid">
-              {simpleProducts.map((product, index) => {
+            <div className="productpage-simple-grid productpage-grid-4">
+              {products.map((product) => {
                 const colors = this.getColorClasses(product.color);
 
                 return (
@@ -240,13 +250,27 @@ class Products extends Component {
                         <h4 className="productpage-card-title">
                           {product.description}
                         </h4>
-                        <button
-                          className={`productpage-learn-more-btn ${colors.text}`}
-                          onClick={() => this.openModal(product)}
-                        >
-                          Learn More
-                          <ArrowRight size={16} />
-                        </button>
+                        <p className="productpage-card-tagline">
+                          {product.tagline}
+                        </p>
+                        <div className="productpage-card-actions">
+                          <button
+                            className={`productpage-learn-more-btn ${colors.text}`}
+                            onClick={() => this.openModal(product)}
+                          >
+                            Learn More
+                            <ArrowRight size={16} />
+                          </button>
+                          <a
+                            href={product.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`productpage-visit-btn ${colors.text}`}
+                          >
+                            Visit
+                            <ExternalLink size={14} />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -288,17 +312,51 @@ class Products extends Component {
                 <p className="productpage-modal-description">
                   {this.state.selectedProduct.details.content}
                 </p>
+
+                {this.state.selectedProduct.details.features && (
+                  <div className="productpage-modal-features">
+                    <h4 className="productpage-modal-features-title">
+                      Key Features
+                    </h4>
+                    <ul className="productpage-modal-features-list">
+                      {this.state.selectedProduct.details.features.map(
+                        (feature, index) => (
+                          <li
+                            key={index}
+                            className="productpage-modal-feature-item"
+                          >
+                            <CheckCircle size={16} />
+                            <span>{feature}</span>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="productpage-modal-actions">
-                <Link to={"/contact"}>
-                  <button
-                    className="productpage-modal-btn-primary"
-                    onClick={this.closeModal}
+                <a
+                  href={this.state.selectedProduct.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="productpage-modal-btn-primary"
+                  onClick={this.closeModal}
+                >
+                  Visit {this.state.selectedProduct.name}
+                  <ExternalLink size={16} />
+                </a>
+                {this.state.selectedProduct.docsUrl && (
+                  <a
+                    href={this.state.selectedProduct.docsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="productpage-modal-btn-secondary"
                   >
-                    Get Started
-                  </button>
-                </Link>
+                    API Documentation
+                    <ExternalLink size={14} />
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -339,34 +397,20 @@ class Products extends Component {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="productpage-cta-section">
-          <div className="productpage-cta-background">
-            <div className="productpage-cta-bg-element-1"></div>
-            <div className="productpage-cta-bg-element-2"></div>
-          </div>
-
-          <div className="productpage-cta-wrapper">
-            <h2 className="productpage-cta-title">Ready to Get Started?</h2>
-            <p className="productpage-cta-description">
-              Join hundreds of organizations already using our AI-powered
-              portfolio intelligence solutions
-            </p>
-
-            <div className="productpage-cta-actions">
-              <Link to="/contact" className="productpage-cta-btn-primary">
-                <span className="productpage-cta-btn-content">
-                  Start Free Trial
-                  <ArrowRight className="productpage-cta-btn-arrow" size={20} />
-                </span>
-              </Link>
-
-              <Link to="/services" className="productpage-cta-btn-secondary">
-                View Services
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* CTA */}
+        <CTASection
+          title="Ready to Get Started?"
+          description="Explore our products or get in touch to see how we can help your business grow"
+          primaryButton={{
+            to: "/contact",
+            label: "Book a Demo",
+            icon: <ArrowRight size={20} />,
+          }}
+          secondaryButton={{
+            to: "/services",
+            label: "View Services",
+          }}
+        />
       </div>
     );
   }

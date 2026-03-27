@@ -1,0 +1,138 @@
+.shared-featuregrid-section {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.shared-featuregrid-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .shared-featuregrid-wrapper { padding: 0 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .shared-featuregrid-wrapper { padding: 0 2rem; }
+}
+
+.shared-featuregrid-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .shared-featuregrid-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .shared-featuregrid-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.shared-featuregrid-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.shared-featuregrid-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shared-featuregrid-card:hover .shared-featuregrid-card-overlay {
+  opacity: 1;
+}
+
+.shared-featuregrid-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.12);
+}
+
+.shared-featuregrid-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s ease;
+}
+
+.shared-featuregrid-card:hover .shared-featuregrid-icon {
+  transform: scale(1.1);
+}
+
+/* 4 color variants for the icons */
+.shared-featuregrid-icon-1 {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #ffffff;
+}
+
+.shared-featuregrid-icon-2 {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #ffffff;
+}
+
+.shared-featuregrid-icon-3 {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #ffffff;
+}
+
+.shared-featuregrid-icon-4 {
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: #ffffff;
+}
+
+.shared-featuregrid-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.shared-featuregrid-card-description {
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.6;
+  position: relative;
+}
+
+.shared-featuregrid-card-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6, #f59e0b);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.shared-featuregrid-card:hover .shared-featuregrid-card-bar {
+  transform: scaleX(1);
+}
+
+@media (max-width: 640px) {
+  .shared-featuregrid-section { padding: 2.5rem 0; }
+  .shared-featuregrid-card { padding: 1.5rem; }
+}

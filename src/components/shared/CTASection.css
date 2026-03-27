@@ -1,0 +1,128 @@
+.shared-cta-section {
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #111827, #1e293b, #111827);
+}
+
+.shared-cta-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.shared-cta-bg-circle-1 {
+  position: absolute;
+  top: -5rem;
+  right: -5rem;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(59, 130, 246, 0.15);
+  border-radius: 9999px;
+  filter: blur(64px);
+}
+
+.shared-cta-bg-circle-2 {
+  position: absolute;
+  bottom: -5rem;
+  left: -5rem;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(139, 92, 246, 0.15);
+  border-radius: 9999px;
+  filter: blur(64px);
+}
+
+.shared-cta-wrapper {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  padding: 0 1rem;
+}
+
+.shared-cta-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.shared-cta-title-gradient {
+  background: linear-gradient(to right, #3b82f6, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shared-cta-description {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  line-height: 1.625;
+}
+
+.shared-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.shared-cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  text-decoration: none;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.shared-cta-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -8px rgba(59, 130, 246, 0.5);
+}
+
+.shared-cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.shared-cta-btn-secondary:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .shared-cta-title { font-size: 2.25rem; }
+}
+
+@media (max-width: 640px) {
+  .shared-cta-section { padding: 3rem 0; }
+  .shared-cta-title { font-size: 1.875rem; }
+  .shared-cta-btn-primary,
+  .shared-cta-btn-secondary {
+    padding: 0.875rem 1.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .shared-cta-title { font-size: 1.5rem; }
+}

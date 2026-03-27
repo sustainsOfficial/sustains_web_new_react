@@ -1,0 +1,194 @@
+.shared-timeline-section {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+}
+
+.shared-timeline-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .shared-timeline-wrapper { padding: 0 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .shared-timeline-wrapper { padding: 0 2rem; }
+}
+
+/* Track + line */
+.shared-timeline-track {
+  position: relative;
+}
+
+.shared-timeline-line {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .shared-timeline-line {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #3b82f6, #10b981, #8b5cf6, #f59e0b);
+    border-radius: 2px;
+    z-index: 1;
+  }
+}
+
+/* Grid */
+.shared-timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .shared-timeline-grid {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.25rem;
+    padding-top: 2rem;
+  }
+}
+
+/* Card */
+.shared-timeline-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.4s ease;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shared-timeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
+  border-color: transparent;
+}
+
+/* Connector dot on the line */
+.shared-timeline-dot {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .shared-timeline-dot {
+    display: block;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.75rem;
+    height: 0.75rem;
+    background: #ffffff;
+    border: 3px solid #3b82f6;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .shared-timeline-card:nth-child(2) .shared-timeline-dot { border-color: #10b981; }
+  .shared-timeline-card:nth-child(3) .shared-timeline-dot { border-color: #8b5cf6; }
+  .shared-timeline-card:nth-child(4) .shared-timeline-dot { border-color: #f59e0b; }
+  .shared-timeline-card:nth-child(5) .shared-timeline-dot { border-color: #3b82f6; }
+  .shared-timeline-card:nth-child(6) .shared-timeline-dot { border-color: #10b981; }
+  .shared-timeline-card:nth-child(7) .shared-timeline-dot { border-color: #8b5cf6; }
+}
+
+/* Icon */
+.shared-timeline-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.shared-timeline-icon-1 { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
+.shared-timeline-icon-2 { background: linear-gradient(135deg, #10b981, #34d399); }
+.shared-timeline-icon-3 { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+.shared-timeline-icon-4 { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+
+/* Year badge */
+.shared-timeline-year {
+  margin-bottom: 0.75rem;
+}
+
+.shared-timeline-year span {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.shared-timeline-card:nth-child(2) .shared-timeline-year span {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.15);
+}
+
+.shared-timeline-card:nth-child(3) .shared-timeline-year span {
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.15);
+}
+
+.shared-timeline-card:nth-child(4) .shared-timeline-year span {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.15);
+}
+
+.shared-timeline-card:nth-child(5) .shared-timeline-year span {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.15);
+}
+
+.shared-timeline-card:nth-child(6) .shared-timeline-year span {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.15);
+}
+
+.shared-timeline-card:nth-child(7) .shared-timeline-year span {
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.15);
+}
+
+/* Title & description */
+.shared-timeline-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.shared-timeline-card-description {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.55;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .shared-timeline-section { padding: 2.5rem 0; }
+  .shared-timeline-card { padding: 1.25rem; }
+}

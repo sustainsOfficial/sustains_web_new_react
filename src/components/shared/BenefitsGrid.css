@@ -1,0 +1,198 @@
+.shared-benefits-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #ffffff, #f8fafc, #eff6ff 60%, #ffffff);
+}
+
+.shared-benefits-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .shared-benefits-wrapper { padding: 0 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .shared-benefits-wrapper { padding: 0 2rem; }
+}
+
+.shared-benefits-main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .shared-benefits-main-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+  }
+}
+
+/* Left: benefit cards */
+.shared-benefits-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .shared-benefits-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.shared-benefit-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  padding: 1.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.shared-benefit-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6, #f59e0b);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.shared-benefit-card:hover::before {
+  transform: scaleX(1);
+}
+
+.shared-benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.shared-benefit-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.shared-benefit-icon-wrapper {
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.shared-benefit-card:nth-child(2) .shared-benefit-icon-wrapper { color: #10b981; }
+.shared-benefit-card:nth-child(3) .shared-benefit-icon-wrapper { color: #f59e0b; }
+.shared-benefit-card:nth-child(4) .shared-benefit-icon-wrapper { color: #8b5cf6; }
+
+.shared-benefit-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.shared-benefit-content p {
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* CTA button */
+.shared-benefits-cta {
+  margin-top: 1.5rem;
+}
+
+.shared-benefits-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  text-decoration: none;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.shared-benefits-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3);
+}
+
+/* Right: Why Sustains sidebar */
+.shared-why-container {
+  background: linear-gradient(135deg, #7c8cf5, #a3b1fa);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+}
+
+.shared-why-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.shared-why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.shared-why-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  padding: 0.875rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.shared-why-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(4px);
+}
+
+.shared-why-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.shared-why-icon {
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.shared-why-icon-1 { background: rgba(74, 222, 128, 0.3); }
+.shared-why-icon-2 { background: rgba(168, 162, 255, 0.3); }
+.shared-why-icon-3 { background: rgba(251, 191, 36, 0.3); }
+.shared-why-icon-4 { background: rgba(96, 165, 250, 0.3); }
+
+@media (max-width: 1023px) {
+  .shared-why-container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .shared-benefits-section { padding: 2.5rem 0; }
+  .shared-benefit-card { padding: 1.25rem; }
+  .shared-why-container { padding: 1.5rem; }
+}

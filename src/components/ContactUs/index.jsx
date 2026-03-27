@@ -17,6 +17,8 @@ import {
   Star,
   Check,
 } from "lucide-react";
+import Hero from "../shared/Hero";
+import CTASection from "../shared/CTASection";
 import "./index.css";
 
 class Contact extends Component {
@@ -229,34 +231,12 @@ class Contact extends Component {
     return (
       <div className="contactpage-container">
         {/* Hero Section */}
-        <section className="contactpage-hero-section">
-          <div className="contactpage-hero-wrapper">
-            <div className="contactpage-hero-content">
-              <div className="contactpage-hero-badge">
-                <MessageCircle size={16} />
-                <span className="contactpage-hero-badge-text">
-                  Get In Touch
-                </span>
-              </div>
-
-              <h1 className="contactpage-hero-title">
-                <span className="contactpage-hero-title-main">
-                  Let's Build a
-                </span>
-                <span className="contactpage-hero-title-gradient">
-                  Smarter Portfolio Future Together
-                </span>
-              </h1>
-
-              <p className="contactpage-hero-description">
-                Ready to transform your organization with AI-powered portfolio
-                intelligence solutions? Our team of experts is here to help you
-                achieve your investment goals through cutting-edge technology
-                across wealth, energy, and infrastructure sectors.
-              </p>
-            </div>
-          </div>
-        </section>
+        <Hero
+          badge={{ icon: <MessageCircle size={16} />, text: "Get In Touch" }}
+          titleMain="Let's Build a"
+          titleGradient="Smarter Portfolio Future Together"
+          description="Ready to transform your organization with AI-powered portfolio intelligence solutions? Our team of experts is here to help you achieve your investment goals through cutting-edge technology across wealth, energy, and infrastructure sectors."
+        />
 
         {/* Contact Methods Section */}
         <section className="contactpage-methods-section">
@@ -566,27 +546,12 @@ class Contact extends Component {
         </section>
 
         {/* Footer CTA Section */}
-        <section className="contactpage-cta-section">
-          <div className="contactpage-cta-wrapper">
-            <div className="contactpage-cta-card">
-              <h2 className="contactpage-cta-title">Ready to Get Started?</h2>
-              <p className="contactpage-cta-description">
-                Join hundreds of companies already transforming their portfolio
-                intelligence journey with our AI-powered solutions.
-              </p>
-              <div className="contactpage-cta-buttons">
-                <Link to="/products" className="contactpage-cta-primary">
-                  Explore Products
-                  <ArrowRight size={18} />
-                </Link>
-                <Link to="/services" className="contactpage-cta-secondary">
-                  View Services
-                  <ArrowRight size={18} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CTASection
+          title="Ready to Get Started?"
+          description="Join hundreds of companies already transforming their portfolio intelligence journey with our AI-powered solutions."
+          primaryButton={{ to: "/products", label: "Explore Products", icon: <ArrowRight size={18} /> }}
+          secondaryButton={{ to: "/services", label: "View Services" }}
+        />
       </div>
     );
   }

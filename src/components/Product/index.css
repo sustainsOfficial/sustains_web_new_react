@@ -1,13 +1,13 @@
 .productpage-container {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+  background: linear-gradient(to bottom, var(--color-bg-light), var(--color-white));
 }
 
 /* Hero Section */
 .productpage-hero-section {
   padding-top: 6rem;
   padding-bottom: 1rem;
-  background: linear-gradient(to bottom right, #eff6ff, #f0fdf4, #f8fafc);
+  background: linear-gradient(to bottom right, var(--color-bg-blue-tint), var(--color-bg-green-tint), var(--color-bg-light));
 }
 
 .productpage-hero-wrapper {
@@ -39,13 +39,13 @@
   background-color: rgba(59, 130, 246, 0.1);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  color: #3b82f6;
+  color: var(--color-primary);
 }
 
 .productpage-hero-badge-text {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #3b82f6;
+  color: var(--color-primary);
 }
 
 .productpage-hero-title {
@@ -63,12 +63,12 @@
 
 .productpage-hero-title-main {
   display: block;
-  color: #111827;
+  color: var(--color-text);
 }
 
 .productpage-hero-title-gradient {
   display: block;
-  background: linear-gradient(45deg, #3b82f6, #10b981, #8b5cf6, #ef4444);
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-purple), var(--color-red));
   background-size: 400% 400%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -90,7 +90,7 @@
 
 .productpage-hero-description {
   font-size: 1.25rem;
-  color: #4b5563;
+  color: var(--color-text-secondary);
   max-width: 56rem;
   margin: 0 auto 3rem auto;
   line-height: 1.625;
@@ -123,23 +123,23 @@
 }
 
 .productpage-hero-stat-primary {
-  color: #3b82f6;
+  color: var(--color-primary);
 }
 
 .productpage-hero-stat-secondary {
-  color: #10b981;
+  color: var(--color-secondary);
 }
 
 .productpage-hero-stat-accent {
-  color: #f59e0b;
+  color: var(--color-accent);
 }
 
 .productpage-hero-stat-purple {
-  color: #8b5cf6;
+  color: var(--color-purple);
 }
 
 .productpage-hero-stat-label {
-  color: #4b5563;
+  color: var(--color-text-secondary);
 }
 
 /* Simple Products Section */
@@ -147,7 +147,7 @@
   padding: 0rem 0;
   background: linear-gradient(
     to bottom right,
-    #f8fafc,
+    var(--color-bg-light),
     rgba(59, 130, 246, 0.05)
   );
 }
@@ -178,7 +178,7 @@
 .productpage-simple-title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--color-text);
   margin-bottom: 1.5rem;
   margin-top: 0px;
 }
@@ -190,7 +190,7 @@
 }
 
 .productpage-title-gradient {
-  background: linear-gradient(45deg, #3b82f6, #10b981);
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -198,7 +198,7 @@
 
 .productpage-simple-subtitle {
   font-size: 1.25rem;
-  color: #4b5563;
+  color: var(--color-text-secondary);
   max-width: 48rem;
   margin: 0 auto;
 }
@@ -209,13 +209,13 @@
 }
 
 @media (min-width: 1024px) {
-  .productpage-simple-grid {
+  .productpage-simple-grid:not(.productpage-grid-4) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .productpage-simple-card {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border-radius: 1rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -255,7 +255,7 @@
 .productpage-card-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-white);
   padding: 1.5rem;
 }
 
@@ -270,7 +270,7 @@
 .productpage-card-title {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--color-text);
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -297,23 +297,23 @@
 
 /* Primary Button Hover (Blue) */
 .productpage-text-primary .productpage-learn-more-btn:hover {
-  background-color: #3b82f6;
+  background-color: var(--color-primary);
   color: white !important;
-  border-color: #3b82f6;
+  border-color: var(--color-primary);
 }
 
 /* Secondary Button Hover (Green) */
 .productpage-text-secondary .productpage-learn-more-btn:hover {
-  background-color: #10b981;
+  background-color: var(--color-secondary);
   color: white !important;
-  border-color: #10b981;
+  border-color: var(--color-secondary);
 }
 
 /* Accent Button Hover (Orange) */
 .productpage-text-accent .productpage-learn-more-btn:hover {
-  background-color: #f59e0b;
+  background-color: var(--color-accent);
   color: white !important;
-  border-color: #f59e0b;
+  border-color: var(--color-accent);
 }
 
 .productpage-learn-more-btn svg {
@@ -348,7 +348,7 @@
 }
 
 .productpage-modal-content {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border-radius: 1.5rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   max-width: 42rem;
@@ -400,14 +400,14 @@
 .productpage-modal-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--color-text);
   margin-bottom: 0.5rem;
 }
 
 .productpage-modal-subtitle {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #3b82f6;
+  color: var(--color-primary);
   margin: 0;
 }
 
@@ -425,7 +425,7 @@
 
 .productpage-modal-description {
   font-size: 1rem;
-  color: #4b5563;
+  color: var(--color-text-secondary);
   line-height: 1.625;
   margin-bottom: 0;
 }
@@ -451,7 +451,7 @@
   border-radius: 0.75rem;
   font-weight: 600;
   color: white;
-  background: linear-gradient(to right, #3b82f6, #10b981);
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -470,33 +470,33 @@
   padding: 0.75rem 1.5rem;
   border-radius: 0.75rem;
   font-weight: 600;
-  border: 2px solid #e5e7eb;
-  color: #374151;
+  border: 2px solid var(--color-border);
+  color: var(--color-text-dark-gray);
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .productpage-modal-btn-secondary:hover {
-  border-color: #3b82f6;
-  color: #3b82f6;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 /* Color Classes for Simple Products */
 .productpage-text-primary {
-  color: #3b82f6;
+  color: var(--color-primary);
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 .productpage-text-secondary {
-  color: #10b981;
+  color: var(--color-secondary);
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 .productpage-text-accent {
-  color: #f59e0b;
+  color: var(--color-accent);
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -513,10 +513,126 @@
   background: linear-gradient(to top, rgba(245, 158, 11, 0.8), transparent);
 }
 
+.productpage-text-purple {
+  color: var(--color-purple);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.productpage-from-purple-80 {
+  background: linear-gradient(to top, rgba(139, 92, 246, 0.8), transparent);
+}
+
+/* Purple Button Hover */
+.productpage-text-purple .productpage-learn-more-btn:hover {
+  background-color: var(--color-purple);
+  color: white !important;
+  border-color: var(--color-purple);
+}
+
+/* 4-column grid for products */
+.productpage-grid-4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .productpage-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .productpage-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card tagline */
+.productpage-card-tagline {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Card actions row */
+.productpage-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Visit button */
+.productpage-visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+}
+
+.productpage-visit-btn:hover {
+  opacity: 0.8;
+  transform: translateX(0.125rem);
+}
+
+/* Modal features list */
+.productpage-modal-features {
+  margin-top: 1.5rem;
+}
+
+.productpage-modal-features-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.productpage-modal-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.productpage-modal-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.productpage-modal-feature-item svg {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* Modal button adjustments for links */
+.productpage-modal-btn-primary {
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.productpage-modal-btn-secondary {
+  text-decoration: none;
+  gap: 0.375rem;
+}
+
 /* Main Products Section (Legacy) */
 .productpage-main-section {
   padding: 6rem 0;
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .productpage-main-wrapper {
@@ -616,13 +732,13 @@
 .productpage-dashboard-title {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--color-text);
 }
 
 .productpage-dashboard-indicator {
   width: 0.75rem;
   height: 0.75rem;
-  background-color: #4ade80;
+  background-color: var(--color-secondary-lighter);
   border-radius: 9999px;
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -660,16 +776,16 @@
 }
 
 .productpage-metric-primary .productpage-metric-value {
-  color: #3b82f6;
+  color: var(--color-primary);
 }
 
 .productpage-metric-secondary .productpage-metric-value {
-  color: #10b981;
+  color: var(--color-secondary);
 }
 
 .productpage-metric-label {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: var(--color-text-muted);
 }
 
 .productpage-floating-icon {
@@ -728,22 +844,22 @@
 
 .productpage-product-price {
   padding: 0.25rem 0.75rem;
-  background-color: #f3f4f6;
+  background-color: var(--color-gray-100);
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #374151;
+  color: var(--color-text-dark-gray);
 }
 
 .productpage-product-title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--color-text);
 }
 
 .productpage-product-description {
   font-size: 1.25rem;
-  color: #4b5563;
+  color: var(--color-text-secondary);
   line-height: 1.625;
 }
 
@@ -761,7 +877,7 @@
 .productpage-section-title {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--color-text);
   margin-bottom: 1rem;
 }
 
@@ -780,20 +896,20 @@
 }
 
 .productpage-feature-icon {
-  color: #10b981;
+  color: var(--color-secondary);
   flex-shrink: 0;
   margin-top: 0.125rem;
 }
 
 .productpage-benefit-icon {
-  color: #eab308;
+  color: var(--color-accent-bright);
   flex-shrink: 0;
   margin-top: 0.125rem;
 }
 
 .productpage-feature-text,
 .productpage-benefit-text {
-  color: #4b5563;
+  color: var(--color-text-secondary);
   font-size: 0.875rem;
   text-align: start;
 }
@@ -848,21 +964,21 @@
   padding: 1rem 2rem;
   border-radius: 1rem;
   font-weight: 600;
-  border: 2px solid #e5e7eb;
-  color: #374151;
+  border: 2px solid var(--color-border);
+  color: var(--color-text-dark-gray);
   background: transparent;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .productpage-btn-secondary:hover {
-  border-color: #3b82f6;
-  color: #3b82f6;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 /* Gradient Classes */
 .productpage-from-primary {
-  background: linear-gradient(to right, #3b82f6, #10b981);
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 }
 
 .productpage-to-secondary {
@@ -870,7 +986,7 @@
 }
 
 .productpage-from-green-500 {
-  background: linear-gradient(to right, #10b981, #059669);
+  background: linear-gradient(to right, var(--color-secondary), var(--color-secondary-dark));
 }
 
 .productpage-to-emerald-600 {
@@ -878,7 +994,7 @@
 }
 
 .productpage-from-blue-500 {
-  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  background: linear-gradient(to right, var(--color-primary), var(--color-cyan));
 }
 
 .productpage-to-cyan-600 {
@@ -890,7 +1006,7 @@
   padding: 0.5rem 0 3rem;
   background: linear-gradient(
     to bottom right,
-    #f9fafb,
+    var(--color-bg-light-alt),
     rgba(239, 246, 255, 0.3)
   );
 }
@@ -921,7 +1037,7 @@
 .productpage-features-title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--color-text);
   margin-bottom: 1.5rem;
   margin-top: 30px;
 }
@@ -934,7 +1050,7 @@
 
 .productpage-features-subtitle {
   font-size: 1.25rem;
-  color: #4b5563;
+  color: var(--color-text-secondary);
   max-width: 48rem;
   margin: 0 auto;
 }
@@ -970,7 +1086,7 @@
   width: 4rem;
   height: 4rem;
   margin: 0 auto 1rem auto;
-  background: linear-gradient(to bottom right, #f9fafb, #ffffff);
+  background: linear-gradient(to bottom right, var(--color-bg-light-alt), var(--color-white));
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
@@ -980,34 +1096,34 @@
 }
 
 .productpage-feature-icon-1 svg {
-  color: #8b5cf6;
+  color: var(--color-purple);
 }
 .productpage-feature-icon-2 svg {
-  color: #10b981;
+  color: var(--color-secondary);
 }
 .productpage-feature-icon-3 svg {
-  color: #eab308;
+  color: var(--color-accent-bright);
 }
 .productpage-feature-icon-4 svg {
-  color: #3b82f6;
+  color: var(--color-primary);
 }
 
 .productpage-feature-card-title {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--color-text);
   margin-bottom: 0.5rem;
 }
 
 .productpage-feature-card-description {
-  color: #4b5563;
+  color: var(--color-text-secondary);
   font-size: 0.875rem;
 }
 
 /* CTA Section */
 .productpage-cta-section {
   padding: 6rem 0;
-  background: linear-gradient(to bottom right, #111827, #1e293b, #111827);
+  background: linear-gradient(to bottom right, var(--color-bg-dark), var(--color-bg-dark-alt), var(--color-bg-dark));
   position: relative;
   overflow: hidden;
 }
@@ -1063,7 +1179,7 @@
 .productpage-cta-title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-white);
   margin-bottom: 1.5rem;
   margin-top: 0px;
 }
@@ -1076,7 +1192,7 @@
 
 .productpage-cta-description {
   font-size: 1.25rem;
-  color: #d1d5db;
+  color: var(--color-border-dark);
   margin-bottom: 2rem;
   max-width: 32rem;
   margin-left: auto;
@@ -1105,7 +1221,7 @@
   border-radius: 1rem;
   font-weight: 600;
   color: white;
-  background: linear-gradient(to right, #3b82f6, #10b981);
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -1121,7 +1237,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, #10b981, #3b82f6);
+  background: linear-gradient(to right, var(--color-secondary), var(--color-primary));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1154,7 +1270,7 @@
   border-radius: 1rem;
   font-weight: 600;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  color: #ffffff;
+  color: var(--color-white);
   background: transparent;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -1162,7 +1278,7 @@
 }
 
 .productpage-cta-btn-secondary:hover {
-  border-color: #ffffff;
+  border-color: var(--color-white);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -1178,7 +1294,7 @@
 }
 
 .productpage-expandable-content {
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--color-border);
   padding-top: 0.3rem;
 }
 
@@ -1189,7 +1305,7 @@
 }
 
 .productpage-expandable-text {
-  color: #4b5563;
+  color: var(--color-text-secondary);
   font-size: 0.875rem;
   line-height: 1.625;
 }
@@ -1199,7 +1315,7 @@
 }
 
 .productpage-card-description {
-  color: #4b5563;
+  color: var(--color-text-secondary);
   margin-top: 0px;
   margin-bottom: 0px;
 }

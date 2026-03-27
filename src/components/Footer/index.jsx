@@ -168,13 +168,13 @@ const Footer = () => {
                   <span>WhatsApp</span>
                 </Link> */}
                 <Link
-                  to="https://www.sailbot.ai/"
+                  to="https://www.sustains.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-link"
                 >
                   <Globe size={20} />
-                  <span>Website</span>
+                  <span>Nidhi</span>
                 </Link>
               </div>
             </div>

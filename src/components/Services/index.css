@@ -149,6 +149,561 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* ========== Tech Partnership Section ========== */
+.servicepage-techpartner-section {
+  padding: 3rem 0 4rem;
+  background-color: #ffffff;
+}
+
+.servicepage-techpartner-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .servicepage-techpartner-wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicepage-techpartner-wrapper {
+    padding: 0 2rem;
+  }
+}
+
+.servicepage-techpartner-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.servicepage-techpartner-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .servicepage-techpartner-title {
+    font-size: 2.25rem;
+  }
+}
+
+.servicepage-techpartner-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.servicepage-techpartner-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .servicepage-techpartner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .servicepage-techpartner-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.servicepage-techpartner-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.servicepage-techpartner-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+  transform: translateY(-3px);
+}
+
+.servicepage-techpartner-card-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+  color: #3b82f6;
+}
+
+.servicepage-techpartner-card:nth-child(2) .servicepage-techpartner-card-icon {
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+  color: #10b981;
+}
+
+.servicepage-techpartner-card:nth-child(3) .servicepage-techpartner-card-icon {
+  background: linear-gradient(135deg, #fef3c7, #fffbeb);
+  color: #f59e0b;
+}
+
+.servicepage-techpartner-card:nth-child(4) .servicepage-techpartner-card-icon {
+  background: linear-gradient(135deg, #f3e8ff, #faf5ff);
+  color: #8b5cf6;
+}
+
+.servicepage-techpartner-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.servicepage-techpartner-card-description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Partners strip */
+.servicepage-partners-strip {
+  text-align: center;
+  padding: 2rem 0 0;
+  border-top: 1px solid #f1f5f9;
+}
+
+.servicepage-partners-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.servicepage-partners-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.servicepage-partner-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  transition: all 0.3s ease;
+}
+
+.servicepage-partner-badge:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background: linear-gradient(135deg, #eff6ff, #f0f9ff);
+}
+
+/* ========== Energy Origin Story Section ========== */
+.servicepage-energy-story-section {
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: #ffffff;
+}
+
+.servicepage-energy-story-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 640px) {
+  .servicepage-energy-story-wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicepage-energy-story-wrapper {
+    padding: 0 2rem;
+  }
+}
+
+/* Decorative background circles */
+.servicepage-energy-story-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.servicepage-energy-story-bg-circle-1 {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.servicepage-energy-story-bg-circle-2 {
+  position: absolute;
+  bottom: -15%;
+  left: -8%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+/* Content grid: story left, credentials right */
+.servicepage-energy-story-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .servicepage-energy-story-content {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+  }
+}
+
+/* Left: narrative */
+.servicepage-energy-story-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicepage-energy-story-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  color: #34d399;
+  font-size: 0.875rem;
+  font-weight: 600;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+}
+
+.servicepage-energy-story-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .servicepage-energy-story-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .servicepage-energy-story-title {
+    font-size: 1.75rem;
+  }
+}
+
+.servicepage-energy-story-narrative p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 1.25rem;
+}
+
+.servicepage-energy-story-narrative strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.servicepage-energy-story-highlight {
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  color: #34d399 !important;
+  border-left: 3px solid #10b981;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Right: credentials */
+.servicepage-energy-story-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.servicepage-energy-credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.servicepage-energy-credential-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.servicepage-energy-credential-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.servicepage-energy-credential-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.15));
+  color: #34d399;
+}
+
+.servicepage-energy-credential-text h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.servicepage-energy-credential-text p {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Bottom stat callout */
+.servicepage-energy-story-stat {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.08));
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.servicepage-energy-story-stat-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #34d399;
+  margin-bottom: 0.5rem;
+}
+
+.servicepage-energy-story-stat p {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ========== Responsive for story section ========== */
+@media (max-width: 640px) {
+  .servicepage-energy-story-section {
+    padding: 3rem 0;
+  }
+
+  .servicepage-energy-credential-card {
+    padding: 1rem;
+  }
+
+  .servicepage-energy-story-narrative p {
+    font-size: 0.9375rem;
+  }
+}
+
+/* ========== Energy Projects Section ========== */
+.servicepage-energy-section {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom right, #f8fafc, #f0fdf4, #f8fafc);
+}
+
+.servicepage-energy-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .servicepage-energy-wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicepage-energy-wrapper {
+    padding: 0 2rem;
+  }
+}
+
+.servicepage-energy-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.servicepage-energy-badge {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  color: #10b981 !important;
+}
+
+.servicepage-energy-badge .servicepage-hero-badge-text {
+  color: #10b981 !important;
+}
+
+.servicepage-energy-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .servicepage-energy-title {
+    font-size: 2.25rem;
+  }
+}
+
+.servicepage-energy-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.servicepage-energy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .servicepage-energy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicepage-energy-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.servicepage-energy-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.servicepage-energy-card:hover {
+  border-color: #10b981;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.1);
+  transform: translateY(-2px);
+}
+
+.servicepage-energy-card-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  color: #059669;
+}
+
+.servicepage-energy-card-content {
+  flex: 1;
+}
+
+.servicepage-energy-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.375rem;
+}
+
+.servicepage-energy-card-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* ========== Responsive for new sections ========== */
+@media (max-width: 640px) {
+  .servicepage-techpartner-section {
+    padding: 2rem 0 3rem;
+  }
+
+  .servicepage-techpartner-title,
+  .servicepage-energy-title {
+    font-size: 1.875rem;
+  }
+
+  .servicepage-techpartner-subtitle,
+  .servicepage-energy-subtitle {
+    font-size: 1rem;
+  }
+
+  .servicepage-techpartner-card {
+    padding: 1.25rem;
+  }
+
+  .servicepage-energy-section {
+    padding: 2rem 0;
+  }
+
+  .servicepage-energy-card {
+    padding: 1.25rem;
+  }
+
+  .servicepage-partner-badge {
+    padding: 0.375rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
 /* Services & Expertise Section with Modal */
 .servicepage-expertise-section {
   padding: 1rem 0 3rem;
