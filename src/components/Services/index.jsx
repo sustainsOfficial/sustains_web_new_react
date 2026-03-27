@@ -33,37 +33,37 @@ const Services = () => {
       icon: <Activity size={24} />,
       title: "Grid Studies",
       description:
-        "Power flow analysis, stability assessment, fault current analysis, and grid impact evaluation for renewable energy projects.",
+        "Power flow, stability, fault current, and grid impact evaluation for renewables.",
     },
     {
       icon: <BarChart3 size={24} />,
       title: "Electricity Forecasting",
       description:
-        "AI-driven demand and generation forecasting using weather data, historical patterns, and machine learning models.",
+        "AI-driven demand and generation forecasting using weather data and ML models.",
     },
     {
       icon: <Sun size={24} />,
       title: "Solar Resource Assessment",
       description:
-        "Solar irradiance analysis, site suitability studies, energy yield estimation, and bankability reports.",
+        "Irradiance analysis, site suitability, yield estimation, and bankability reports.",
     },
     {
       icon: <Wind size={24} />,
       title: "Wind Energy Analysis",
       description:
-        "Wind resource assessment, turbine selection optimization, wake effect modeling, and energy production estimation.",
+        "Resource assessment, turbine selection, wake modeling, and production estimation.",
     },
     {
       icon: <BatteryCharging size={24} />,
       title: "Energy Audits & Efficiency",
       description:
-        "Comprehensive energy audits for commercial and industrial facilities with cost reduction strategies.",
+        "Energy audits for commercial and industrial facilities with cost reduction strategies.",
     },
     {
       icon: <FileText size={24} />,
       title: "Regulatory & Compliance",
       description:
-        "Guidance on energy market regulations, grid code compliance, environmental clearances, and policy frameworks.",
+        "Market regulations, grid code compliance, and environmental clearances.",
     },
   ];
 
@@ -72,19 +72,19 @@ const Services = () => {
       icon: <Cpu size={24} />,
       title: "AI Automations",
       description:
-        "Custom chatbots, workflow automation, content generation, and intelligent business process automation.",
+        "Chatbots, workflow automation, and intelligent business process automation.",
     },
     {
       icon: <Globe size={24} />,
       title: "WordPress Management",
       description:
-        "Theme customization, plugin management, performance optimization, security hardening, and maintenance.",
+        "Customization, performance optimization, security hardening, and maintenance.",
     },
     {
       icon: <ShoppingBag size={24} />,
       title: "Shopify Management",
       description:
-        "Store setup, theme development, product catalog management, payment integration, and conversion optimization.",
+        "Store setup, catalog management, payments, and conversion optimization.",
     },
     {
       icon: <Search size={24} />,
@@ -99,25 +99,25 @@ const Services = () => {
       icon: <Flame size={24} />,
       label: "Energy-First Since Day One",
       detail:
-        "Sustains.ai was born from the energy sector — every other vertical grew from this core",
+        "Every other vertical grew from this core",
     },
     {
       icon: <Award size={24} />,
       label: "Domain Expertise That Runs Deep",
       detail:
-        "Our team carries certifications and hands-on experience across solar, wind, grid operations, and energy markets",
+        "Certifications and hands-on experience across solar, wind, and grid operations",
     },
     {
       icon: <Heart size={24} />,
       label: "Built by Energy Enthusiasts",
       detail:
-        "We don't just work in energy — we're passionate about it. It's what gets us out of bed every morning",
+        "We don't just work in energy — we live it",
     },
     {
       icon: <GraduationCap size={24} />,
       label: "Research-Backed Approach",
       detail:
-        "Our methodologies are grounded in published research, academic collaboration, and real-world project execution",
+        "Grounded in published research and real-world execution",
     },
   ];
 
@@ -128,7 +128,7 @@ const Services = () => {
         animated
         titleMain="What We Do"
         titleGradient="Two things. Really well."
-        description="Energy consultancy rooted in deep domain expertise, and technology partnerships that help businesses grow digitally."
+        description="Energy consultancy and technology partnerships — rooted in deep domain expertise."
       />
 
       {/* ═══ SECTOR 1: ENERGY ORIGIN STORY + SERVICES ═══ */}
@@ -156,23 +156,15 @@ const Services = () => {
 
               <div className="servicepage-energy-story-narrative">
                 <p>
-                  When Sustains.ai was founded, it wasn't as a generic tech
-                  company looking for a market.{" "}
                   <strong>We started in energy</strong> — because that's what
-                  we're passionate about. Our team are energy enthusiasts at
-                  heart, with deep certifications and hands-on experience across
-                  solar, wind, grid operations, and energy markets.
+                  we're passionate about. Deep certifications, hands-on
+                  experience across solar, wind, and grid operations.
                 </p>
                 <p>
-                  Every product we've built since — from wealth management to
-                  CRM — grew outward from this foundation. But energy remains
-                  our heartbeat. When you work with us on an energy project,
-                  you're working with people who genuinely live and breathe
-                  energy.
+                  Every product since grew from this foundation. Energy remains our heartbeat.
                 </p>
                 <p className="servicepage-energy-story-highlight">
-                  That's why companies trust us with their most complex energy
-                  challenges.
+                  That's why companies trust us with their most complex energy challenges.
                 </p>
               </div>
             </FadeIn>
@@ -241,7 +233,7 @@ const Services = () => {
         badge={{ icon: <Handshake size={16} />, text: "Tech Partnerships" }}
         title="Your Dedicated"
         titleGradient="Tech Partner"
-        subtitle="We work as your extended technology team — handling AI automations, website management, SEO, and everything digital so you can focus on your business."
+        subtitle="Your extended tech team — AI, websites, SEO, and everything digital."
         features={techServices}
       />
 
@@ -249,7 +241,7 @@ const Services = () => {
       <CTASection
         title="Let's Work"
         titleGradient="Together"
-        description="Whether it's an energy project or a digital growth challenge — we'd love to hear from you."
+        description="Energy project or digital growth challenge — let's talk."
         primaryButton={{
           to: "/contact",
           label: "Get In Touch",

@@ -71,7 +71,7 @@ const Contact = () => {
         badge={{ icon: <MessageCircle size={16} />, text: "Get In Touch" }}
         titleMain="Let's Talk About"
         titleGradient="What You're Building"
-        description="Whether you need an energy platform, a wealth management API, a tech partner, or just want to explore — we'd love to hear from you."
+        description="Energy, wealth, tech, or just exploring — we'd love to hear from you."
       />
 
       <ContactMethodsGrid

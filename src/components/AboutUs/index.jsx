@@ -83,26 +83,16 @@ const TeamSlideshow = () => {
       <div className="aboutpage-story-clean-section">
         <div className="aboutpage-story-content">
           <p className="aboutpage-story-paragraph">
-            <strong>Sustains.ai</strong> was founded in{" "}
-            <strong>January 2025</strong> by a team that believed
-            analytics wasn't just about numbers — it was about building
-            tools that truly understand the industries they serve. We
-            started in <strong>energy</strong> because that's where our
-            deepest domain expertise lived, and expanded into{" "}
+            Founded <strong>January 2025</strong>. Started in{" "}
+            <strong>energy</strong>, expanded into{" "}
             <strong>wealth management, CRM, and travel tech</strong>{" "}
             as we proved the model.
           </p>
           <p className="aboutpage-story-paragraph">
-            Today, we're a{" "}
-            <strong>growing team of 10+ professionals</strong> —
-            including VP-level leaders from major banks, asset management
-            firms, energy project developers, and global consultancies.
-            Together, we're driving{" "}
-            <strong>
-              product development, energy consulting, tech partnerships,
-              and client delivery
-            </strong>{" "}
-            across multiple industries.
+            Today — <strong>10+ professionals</strong> from
+            banks, energy developers, and global consultancies.
+            Driving <strong>products, consulting, and tech partnerships</strong>{" "}
+            across industries.
           </p>
         </div>
       </div>
@@ -116,25 +106,25 @@ const About = () => {
       icon: <Brain size={32} />,
       title: "Domain-First Thinking",
       description:
-        "We understand the industry before we write a single line of code — that's why our products actually work",
+        "Understand the industry first, then write the code",
     },
     {
       icon: <Shield size={32} />,
       title: "Trust & Transparency",
       description:
-        "Building secure, reliable solutions our clients can depend on for their most critical operations",
+        "Secure, reliable solutions for critical operations",
     },
     {
       icon: <Globe size={32} />,
       title: "Real-World Impact",
       description:
-        "We measure success by the problems we solve, not the features we ship",
+        "Success = problems solved, not features shipped",
     },
     {
       icon: <Users size={32} />,
       title: "Collaboration",
       description:
-        "Working alongside partners, academics, and industry teams to build solutions that truly fit",
+        "Partners, academics, and industry teams — building together",
     },
   ];
 
@@ -143,35 +133,35 @@ const About = () => {
       year: "Late 2024",
       title: "The Idea",
       description:
-        "Energy analysts and technologists start exploring how AI can solve domain-specific problems across industries",
+        "Energy analysts and technologists explore AI for domain-specific problems",
       icon: <Lightbulb size={24} />,
     },
     {
       year: "Jan 2025",
       title: "Sustains.ai is Born",
       description:
-        "The team officially comes together — energy consulting begins as the first service offering",
+        "Team comes together — energy consulting begins as first offering",
       icon: <Zap size={24} />,
     },
     {
       year: "Mid 2025",
       title: "Nidhi Launches",
       description:
-        "Our first product goes live — AI-powered wealth management APIs for financial advisors and fintech platforms",
+        "AI-powered wealth management APIs go live",
       icon: <TrendingUp size={24} />,
     },
     {
       year: "Mid 2025",
       title: "Nudge Launches",
       description:
-        "Energy BD platform enters pilot with energy teams — built for MW, stages, and bankability",
+        "Energy BD platform enters pilot — built for MW, stages, and bankability",
       icon: <Zap size={24} />,
     },
     {
       year: "2025",
       title: "Sailbot & Azyro",
       description:
-        "CRM and travel tech platforms ship, proving the multi-industry model works",
+        "CRM and travel tech ship — multi-industry model proven",
       icon: <Code size={24} />,
     },
     {
@@ -185,7 +175,7 @@ const About = () => {
       year: "2026",
       title: "What's Next",
       description:
-        "Deepening energy consulting, expanding into new verticals, and scaling our product suite globally",
+        "Deeper consulting, new verticals, global scale",
       icon: <Building size={24} />,
     },
   ];
@@ -203,7 +193,7 @@ const About = () => {
         badge={{ icon: <Sparkles size={16} />, text: "About Sustains.ai" }}
         titleMain="Built by People Who"
         titleGradient="Understand Your Industry"
-        description="We're a team of energy enthusiasts, finance experts, and technologists building purpose-built software for industries that deserve better than generic tools."
+        description="Energy enthusiasts, finance experts, and technologists — building software industries actually deserve."
       >
         <div className="aboutpage-hero-stats">
           {stats.map((stat, index) => (
@@ -249,14 +239,10 @@ const About = () => {
                 </div>
                 <div className="aboutpage-mission-content">
                   <p className="aboutpage-mission-statement">
-                    To build purpose-built, AI-powered platforms for industries
-                    that have been underserved by generic software.
+                    Build AI-powered platforms for industries underserved by generic software.
                   </p>
                   <p className="aboutpage-mission-description">
-                    We believe every industry — from energy to wealth management
-                    to travel — deserves software built specifically for how it
-                    works. Not adapted from something else. Built from scratch,
-                    by people who understand the domain.
+                    Every industry deserves software built for how it actually works — not adapted from something else.
                   </p>
                 </div>
               </div>
@@ -267,14 +253,10 @@ const About = () => {
                 <div className="aboutpage-vision-content">
                   <h3 className="aboutpage-vision-title">Our Vision</h3>
                   <p className="aboutpage-vision-statement">
-                    To become the company industries turn to when they need
-                    software that truly fits.
+                    The company industries turn to when they need software that truly fits.
                   </p>
                   <p className="aboutpage-vision-description">
-                    We see a future where every specialised industry has access
-                    to intelligent, AI-powered tools built with the same care
-                    and domain expertise as enterprise products — but designed
-                    for how real practitioners actually work.
+                    Intelligent tools with enterprise-grade care — designed for how real practitioners work.
                   </p>
                 </div>
               </div>
@@ -291,10 +273,7 @@ const About = () => {
 
                 <div className="aboutpage-story-content">
                   <p className="aboutpage-story-text">
-                    Before dashboards and data, there were discussions.
-                    Passionate energy analysts, portfolio strategists, coders,
-                    and venture thinkers gathering after work — not for
-                    networking, but for pure intellectual curiosity.
+                    Before dashboards and data, there were late-night discussions — energy analysts, coders, and strategists driven by pure curiosity.
                   </p>
 
                   <div className="aboutpage-story-quote-section">
@@ -314,12 +293,7 @@ const About = () => {
                           The Beginning
                         </h4>
                         <p className="aboutpage-story-journey-text">
-                          In January 2025, a team of energy enthusiasts and
-                          technologists came together to build what they
-                          couldn't find — intelligent, domain-specific software.
-                          Energy was the starting point because that's where our
-                          deepest expertise lived. Everything else grew from
-                          there.
+                          January 2025 — energy enthusiasts and technologists came together to build what they couldn't find. Energy was the starting point. Everything else grew from there.
                         </p>
                       </div>
                     </div>
@@ -330,12 +304,7 @@ const About = () => {
                           Where We Are Today
                         </h4>
                         <p className="aboutpage-story-journey-text">
-                          Today we're a growing team of 10+ professionals —
-                          including VP-level leaders from major banks, asset
-                          management firms, energy project developers, and
-                          global consultancies. We've shipped four products,
-                          serve as tech partners to multiple companies, and
-                          continue to deepen our energy consulting practice.
+                          10+ professionals — VP-level leaders from banks, energy developers, and consultancies. Four products shipped, multiple tech partnerships active.
                         </p>
                       </div>
                     </div>
@@ -391,7 +360,7 @@ const About = () => {
       {/* CTA */}
       <CTASection
         title="Want to Work With Us?"
-        description="Whether you're looking for a product, a tech partner, or energy consulting — let's talk."
+        description="Product, tech partner, or energy consulting — let's talk."
         primaryButton={{
           to: "/products",
           label: "Explore Our Products",

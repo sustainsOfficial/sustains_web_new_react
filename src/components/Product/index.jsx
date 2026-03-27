@@ -91,7 +91,7 @@ class Products extends Component {
         details: {
           subtitle: "Wealth Management API Platform",
           content:
-            "Nidhi is an AI-powered API platform built for wealth management companies. It offers comprehensive portfolio analytics, risk profiling, rebalancing, and reporting through a robust API layer. Designed for financial advisors, mutual fund distributors, and fintech platforms seeking to integrate intelligent wealth management capabilities.",
+            "AI-powered API platform for wealth management — portfolio analytics, risk profiling, rebalancing, and reporting. Built for financial advisors and fintech platforms.",
           features: [
             "Risk profiling with VaR, CVaR & Monte Carlo simulations",
             "AI-powered portfolio analytics and rebalancing",
@@ -116,7 +116,7 @@ class Products extends Component {
         details: {
           subtitle: "Energy BD CRM Platform",
           content:
-            "Nudge is an end-to-end energy management solution purpose-built for energy business development teams. It is an operating system built for MW, stages, and bankability — not tickets. From global project tracking and smart pipeline management to solar analysis with NREL integration, Nudge powers energy teams to close deals faster.",
+            "Energy BD operating system built for MW, stages, and bankability — not tickets. Global project tracking, pipeline management, and NREL-integrated solar analysis.",
           features: [
             "Global project tracking across multiple countries",
             "AI-powered pipeline management and forecasting",
@@ -140,7 +140,7 @@ class Products extends Component {
         details: {
           subtitle: "Your CRM, Simplified",
           content:
-            "Sailbot is a calm, distraction-free CRM workspace designed for focused teams. With AI-powered insights, seamless client management, and revenue tracking in one place, Sailbot helps teams manage prospects, pipeline, and growth without the noise of bloated enterprise CRMs.",
+            "Calm, distraction-free CRM with AI insights, pipeline management, and revenue tracking — without the bloat of enterprise CRMs.",
           features: [
             "AI-powered email templates with tone selection",
             "Visual sales pipeline with drag-to-reorder stages",
@@ -164,7 +164,7 @@ class Products extends Component {
         details: {
           subtitle: "Purpose-Built for Tour Operators",
           content:
-            "Azyro is an end-to-end travel tech platform designed exclusively for tour operators — whether solo, a small team, or a large agency. Not another generic CRM, but a purpose-built solution to manage bookings, customers, itineraries, and finances with simplicity and affordability.",
+            "End-to-end platform for tour operators — bookings, itineraries, customers, and finances. Simple and affordable, not another generic CRM.",
           features: [
             "Smart booking management with real-time tracking",
             "Departure management with capacity & profitability monitoring",
@@ -183,7 +183,7 @@ class Products extends Component {
       {
         icon: <Shield size={24} />,
         title: "Enterprise Security",
-        description: "Bank-level encryption and SOC 2 compliance across all products",
+        description: "Bank-level encryption and SOC 2 compliance",
       },
       {
         icon: <Globe size={24} />,
@@ -198,7 +198,7 @@ class Products extends Component {
       {
         icon: <TrendingUp size={24} />,
         title: "AI-Powered Analytics",
-        description: "ML-powered insights and predictive modeling in every product",
+        description: "ML-powered insights and predictive modeling",
       },
     ];
 
@@ -209,7 +209,7 @@ class Products extends Component {
           badge={{ icon: <BarChart3 size={16} />, text: "Our Product Suite" }}
           titleMain="Purpose-Built Products"
           titleGradient="Across Multiple Verticals"
-          description="From wealth management APIs to energy deal management, CRM workspaces to tour operator platforms — we build focused, AI-powered products that solve real problems in their respective industries."
+          description="Focused, AI-powered products — each purpose-built for its industry."
         />
 
         {/* Main Products Section */}
@@ -370,8 +370,7 @@ class Products extends Component {
                 Built for Enterprise Scale
               </h2>
               <p className="productpage-features-subtitle">
-                Every product is designed with enterprise-grade security,
-                scalability, and reliability
+                Enterprise-grade security, scalability, and reliability across every product
               </p>
             </div>
 
@@ -400,7 +399,7 @@ class Products extends Component {
         {/* CTA */}
         <CTASection
           title="Ready to Get Started?"
-          description="Explore our products or get in touch to see how we can help your business grow"
+          description="See how we can help your business grow."
           primaryButton={{
             to: "/contact",
             label: "Book a Demo",
