@@ -5,9 +5,6 @@ import {
   TrendingUp,
   Users,
   BarChart3,
-  Wallet,
-  BatteryCharging,
-  Plane,
   Sparkles,
   Target,
   Star,
@@ -18,7 +15,6 @@ import {
   Bot,
   Puzzle,
   RefreshCw,
-  Wrench,
 } from "lucide-react";
 
 import Hero from "../shared/Hero";
@@ -27,88 +23,14 @@ import ClientStrip from "../shared/ClientStrip";
 import TestimonialGrid from "../shared/TestimonialGrid";
 import FeatureGrid from "../shared/FeatureGrid";
 import BenefitsGrid from "../shared/BenefitsGrid";
-import RotatingCard from "../shared/RotatingCard";
+import KeyboardHero from "../shared/KeyboardHero";
 import "./index.css";
 
 const Home = () => {
-  const rotatingItems = [
-    {
-      name: "Nidhi",
-      badge: "Wealth Management",
-      icon: <Wallet size={14} />,
-      tagline: "API Platform for Wealth Management",
-      snippet:
-        "AI-powered portfolio analytics, risk profiling, and rebalancing — built for financial advisors and fintech platforms.",
-      url: "https://www.sustains.in",
-      linkText: "Visit Nidhi",
-      color: "primary",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    },
-    {
-      name: "Nudge",
-      badge: "Energy Management",
-      icon: <BatteryCharging size={14} />,
-      tagline: "End-to-End Energy BD Platform",
-      snippet:
-        "An operating system built for MW, stages, and bankability. Smart pipeline management with solar analysis.",
-      url: "https://www.ishalab.io",
-      linkText: "Visit Nudge",
-      color: "secondary",
-      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&h=400&fit=crop",
-    },
-    {
-      name: "Sailbot",
-      badge: "CRM Platform",
-      icon: <Users size={14} />,
-      tagline: "CRM for Focused Teams",
-      snippet:
-        "A calm, distraction-free workspace with AI-powered insights, pipeline management, and revenue tracking.",
-      url: "https://www.sailbot.ai",
-      linkText: "Visit Sailbot",
-      color: "accent",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    },
-    {
-      name: "Azyro",
-      badge: "Travel Tech",
-      icon: <Plane size={14} />,
-      tagline: "Tour Management, Made Simple",
-      snippet:
-        "Purpose-built for tour operators — bookings, itineraries, customers, and finances in one platform.",
-      url: "https://www.azyro.co",
-      linkText: "Visit Azyro",
-      color: "purple",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop",
-    },
-    {
-      name: "Energy Consulting",
-      badge: "Services",
-      icon: <Zap size={14} />,
-      tagline: "Grid Studies, Forecasting & More",
-      snippet:
-        "Deep domain expertise in solar, wind, grid operations, and energy markets — backed by research and real-world execution.",
-      url: "/services",
-      linkText: "Our Services",
-      color: "energy",
-      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&h=400&fit=crop",
-    },
-    {
-      name: "Tech Partnerships",
-      badge: "Services",
-      icon: <Wrench size={14} />,
-      tagline: "Your Dedicated Tech Partner",
-      snippet:
-        "SEO, WordPress, Shopify, AI automations — we work as your extended technology team so you can focus on growth.",
-      url: "/services",
-      linkText: "Our Services",
-      color: "tech",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop",
-    },
-  ];
 
   return (
     <div className="homepage-container">
-      {/* Hero with rotating card */}
+      {/* Hero with vertical showcase */}
       <Hero
         animated
         badge={{ icon: <Sparkles size={16} />, text: "AI-Powered Platforms" }}
@@ -129,7 +51,7 @@ const Home = () => {
             variant: "secondary",
           },
         ]}
-        rightContent={<RotatingCard items={rotatingItems} interval={5000} />}
+        rightContent={<KeyboardHero />}
       />
 
       {/* Why Choose Sustains */}

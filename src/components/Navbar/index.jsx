@@ -90,9 +90,13 @@ const Navbar = () => {
               </Link>
               <button
                 className="navbar-theme-toggle"
-                onClick={toggleTheme}
+                onClick={(e) => {
+                  e.currentTarget.classList.add("navbar-theme-toggle-pop");
+                  setTimeout(() => e.currentTarget.classList.remove("navbar-theme-toggle-pop"), 500);
+                  toggleTheme();
+                }}
               >
-                {theme === "light" ? "Hate colors?" : "Want colors back?"}
+                {theme === "light" ? "Fan of monochrome?" : "Bring back colors!"}
               </button>
             </div>
 

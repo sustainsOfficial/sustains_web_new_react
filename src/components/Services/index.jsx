@@ -23,6 +23,7 @@ import {
 import Hero from "../shared/Hero";
 import SectionHeader from "../shared/SectionHeader";
 import CTASection from "../shared/CTASection";
+import FeatureGrid from "../shared/FeatureGrid";
 import { FadeIn, StaggerContainer, StaggerItem } from "../shared/AnimationHelpers";
 import "./index.css";
 
@@ -236,39 +237,13 @@ const Services = () => {
       </section>
 
       {/* ═══ SECTOR 2: TECH PARTNERSHIPS ═══ */}
-      <section className="servicepage-techpartner-section">
-        <div className="servicepage-techpartner-wrapper">
-          <FadeIn>
-            <SectionHeader
-              badge={{ icon: <Handshake size={16} />, text: "Tech Partnerships" }}
-              title="Your Dedicated"
-              titleGradient="Tech Partner"
-              subtitle="We work as your extended technology team — handling AI automations, website management, SEO, and everything digital so you can focus on your business."
-            />
-          </FadeIn>
-
-          <StaggerContainer
-            className="servicepage-techpartner-grid"
-            stagger={0.12}
-          >
-            {techServices.map((service) => (
-              <StaggerItem key={service.title}>
-                <div className="servicepage-techpartner-card">
-                  <div className="servicepage-techpartner-card-icon">
-                    {service.icon}
-                  </div>
-                  <h3 className="servicepage-techpartner-card-title">
-                    {service.title}
-                  </h3>
-                  <p className="servicepage-techpartner-card-description">
-                    {service.description}
-                  </p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
+      <FeatureGrid
+        badge={{ icon: <Handshake size={16} />, text: "Tech Partnerships" }}
+        title="Your Dedicated"
+        titleGradient="Tech Partner"
+        subtitle="We work as your extended technology team — handling AI automations, website management, SEO, and everything digital so you can focus on your business."
+        features={techServices}
+      />
 
       {/* CTA */}
       <CTASection

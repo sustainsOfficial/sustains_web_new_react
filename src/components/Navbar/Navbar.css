@@ -168,6 +168,18 @@
   color: #111827;
 }
 
+@keyframes themeTogglePop {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.2) rotate(-3deg); }
+  50% { transform: scale(0.9) rotate(3deg); }
+  75% { transform: scale(1.1) rotate(-1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.navbar-theme-toggle-pop {
+  animation: themeTogglePop 0.5s ease;
+}
+
 .navbar-cta-button {
   display: inline-flex;
   align-items: center;
