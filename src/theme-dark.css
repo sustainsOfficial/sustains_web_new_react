@@ -1,0 +1,946 @@
+/* ═══════════════════════════════════════════════ */
+/* "Hate colors?" — Pure monochrome theme         */
+/* White background, black text, zero color.       */
+/* ═══════════════════════════════════════════════ */
+
+/* ── Nuclear color reset: kill ALL color everywhere ── */
+[data-theme="dark"] * {
+  --color-primary: #111 !important;
+  --color-secondary: #111 !important;
+  --color-accent: #111 !important;
+  --color-purple: #111 !important;
+}
+
+[data-theme="dark"] body {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* Strip every gradient to flat gray/black */
+[data-theme="dark"] [class*="gradient"],
+[data-theme="dark"] [class*="title-gradient"],
+[data-theme="dark"] .shared-hero-title-gradient,
+[data-theme="dark"] .shared-title-gradient,
+[data-theme="dark"] .homepage-title-gradient,
+[data-theme="dark"] .servicepage-title-gradient,
+[data-theme="dark"] .productpage-hero-title-gradient,
+[data-theme="dark"] .productpage-title-gradient,
+[data-theme="dark"] .aboutpage-content-title-gradient,
+[data-theme="dark"] .aboutpage-timeline-title-gradient,
+[data-theme="dark"] .aboutpage-values-title-gradient,
+[data-theme="dark"] .aboutpage-team-title-gradient,
+[data-theme="dark"] .shared-cta-title-gradient {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #111111 !important;
+  animation: none !important;
+}
+
+/* ── All containers: white bg ── */
+[data-theme="dark"] .homepage-container,
+[data-theme="dark"] .productpage-container,
+[data-theme="dark"] .servicepage-container,
+[data-theme="dark"] .aboutpage-container,
+[data-theme="dark"] .contactpage-container {
+  background: #ffffff;
+}
+
+/* ── Navbar ── */
+[data-theme="dark"] .navbar-top {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+[data-theme="dark"] .navbar-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+[data-theme="dark"] .navbar-nav-item {
+  color: #666666;
+}
+
+[data-theme="dark"] .navbar-nav-item:hover,
+[data-theme="dark"] .navbar-nav-item-active {
+  color: #111111;
+}
+
+[data-theme="dark"] .navbar-nav-item-active::after {
+  background: #111111 !important;
+}
+
+[data-theme="dark"] .navbar-cta-button {
+  background: #111111 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .navbar-cta-button:hover {
+  background: #333333 !important;
+}
+
+[data-theme="dark"] .navbar-theme-toggle {
+  color: #999999;
+}
+
+[data-theme="dark"] .navbar-theme-toggle:hover {
+  color: #111111;
+}
+
+[data-theme="dark"] .navbar-mobile {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .navbar-mobile-item {
+  color: #666666;
+}
+
+[data-theme="dark"] .navbar-mobile-cta {
+  background: #111111 !important;
+  color: #ffffff !important;
+}
+
+/* ── All hero sections ── */
+[data-theme="dark"] .shared-hero-section {
+  background: #ffffff !important;
+}
+
+[data-theme="dark"] .shared-hero-title-main {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-hero-description {
+  color: #666666;
+}
+
+[data-theme="dark"] .shared-hero-badge {
+  background: #f5f5f5;
+  color: #666666;
+  border: 1px solid #e5e5e5;
+}
+
+[data-theme="dark"] .shared-hero-btn-primary {
+  background: #111111 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .shared-hero-btn-primary:hover {
+  background: #333333 !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .shared-hero-btn-secondary {
+  border-color: #d5d5d5;
+  color: #111111;
+  background: #ffffff;
+}
+
+[data-theme="dark"] .shared-hero-btn-secondary:hover {
+  border-color: #111111;
+  background: #f5f5f5;
+  color: #111111;
+}
+
+/* ── Section headers ── */
+[data-theme="dark"] .shared-section-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-section-subtitle {
+  color: #666666;
+}
+
+[data-theme="dark"] .shared-section-badge {
+  background: #f5f5f5;
+  color: #666666;
+  border: 1px solid #e5e5e5;
+}
+
+/* ── Feature Grid ── */
+[data-theme="dark"] .shared-featuregrid-section {
+  background: #fafafa;
+}
+
+[data-theme="dark"] .shared-featuregrid-card {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .shared-featuregrid-card:hover {
+  border-color: #cccccc;
+}
+
+[data-theme="dark"] .shared-featuregrid-icon,
+[data-theme="dark"] .shared-featuregrid-icon-1,
+[data-theme="dark"] .shared-featuregrid-icon-2,
+[data-theme="dark"] .shared-featuregrid-icon-3,
+[data-theme="dark"] .shared-featuregrid-icon-4 {
+  background: #f0f0f0 !important;
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .shared-featuregrid-card:hover .shared-featuregrid-icon-1,
+[data-theme="dark"] .shared-featuregrid-card:hover .shared-featuregrid-icon-2,
+[data-theme="dark"] .shared-featuregrid-card:hover .shared-featuregrid-icon-3,
+[data-theme="dark"] .shared-featuregrid-card:hover .shared-featuregrid-icon-4 {
+  background: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .shared-featuregrid-card-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-featuregrid-card-description {
+  color: #666666;
+}
+
+[data-theme="dark"] .shared-featuregrid-card-bar,
+[data-theme="dark"] .shared-featuregrid-card:nth-child(1) .shared-featuregrid-card-bar,
+[data-theme="dark"] .shared-featuregrid-card:nth-child(2) .shared-featuregrid-card-bar,
+[data-theme="dark"] .shared-featuregrid-card:nth-child(3) .shared-featuregrid-card-bar,
+[data-theme="dark"] .shared-featuregrid-card:nth-child(4) .shared-featuregrid-card-bar {
+  background: #111111 !important;
+}
+
+/* ── Benefits Grid ── */
+[data-theme="dark"] .shared-benefits-section {
+  background: #ffffff;
+}
+
+[data-theme="dark"] .shared-benefit-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+[data-theme="dark"] .shared-benefit-card::before {
+  background: #111111 !important;
+}
+
+[data-theme="dark"] .shared-benefit-icon-wrapper,
+[data-theme="dark"] .shared-benefit-card:nth-child(2) .shared-benefit-icon-wrapper,
+[data-theme="dark"] .shared-benefit-card:nth-child(3) .shared-benefit-icon-wrapper,
+[data-theme="dark"] .shared-benefit-card:nth-child(4) .shared-benefit-icon-wrapper {
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .shared-benefit-content h3 {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-benefit-content p {
+  color: #666666;
+}
+
+[data-theme="dark"] .shared-benefits-button {
+  background: #111111 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .shared-why-container {
+  background: #f5f5f5 !important;
+  border: 1px solid #e5e5e5;
+}
+
+[data-theme="dark"] .shared-why-title {
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .shared-why-item {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+[data-theme="dark"] .shared-why-item:hover {
+  background: #fafafa;
+}
+
+[data-theme="dark"] .shared-why-item span {
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .shared-why-icon,
+[data-theme="dark"] .shared-why-icon-1,
+[data-theme="dark"] .shared-why-icon-2,
+[data-theme="dark"] .shared-why-icon-3,
+[data-theme="dark"] .shared-why-icon-4 {
+  background: #e5e5e5 !important;
+  color: #111111 !important;
+}
+
+/* ── Client Strip ── */
+[data-theme="dark"] .shared-clients-section {
+  background: #fafafa;
+}
+
+[data-theme="dark"] .shared-client-badge {
+  background: #ffffff;
+  border-color: #e5e5e5;
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-client-badge:hover {
+  border-color: #111111;
+  color: #111111;
+  box-shadow: none;
+}
+
+/* ── Testimonials ── */
+[data-theme="dark"] .shared-testimonials-section {
+  background: #ffffff;
+}
+
+[data-theme="dark"] .shared-testimonial-card {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .shared-testimonial-card::before {
+  background: #111111 !important;
+}
+
+[data-theme="dark"] .shared-testimonial-stars {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-testimonial-stars svg {
+  fill: #111111;
+}
+
+[data-theme="dark"] .shared-testimonial-card blockquote {
+  color: #444444;
+}
+
+[data-theme="dark"] .shared-testimonial-author h4 {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-testimonial-author p {
+  color: #888888;
+}
+
+/* ── CTA Section — invert to black bg ── */
+[data-theme="dark"] .shared-cta-section {
+  background: #111111 !important;
+}
+
+[data-theme="dark"] .shared-cta-bg-circle-1,
+[data-theme="dark"] .shared-cta-bg-circle-2 {
+  display: none;
+}
+
+[data-theme="dark"] .shared-cta-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .shared-cta-title-gradient {
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+[data-theme="dark"] .shared-cta-description {
+  color: #aaaaaa;
+}
+
+[data-theme="dark"] .shared-cta-btn-primary {
+  background: #ffffff !important;
+  color: #111111 !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .shared-cta-btn-primary:hover {
+  background: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .shared-cta-btn-secondary {
+  border-color: #444444;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .shared-cta-btn-secondary:hover {
+  border-color: #ffffff;
+}
+
+/* ── Rotating Card — all become same monochrome ── */
+[data-theme="dark"] .rotating-card-color-primary,
+[data-theme="dark"] .rotating-card-color-secondary,
+[data-theme="dark"] .rotating-card-color-accent,
+[data-theme="dark"] .rotating-card-color-purple,
+[data-theme="dark"] .rotating-card-color-energy,
+[data-theme="dark"] .rotating-card-color-tech {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+[data-theme="dark"] .rotating-card-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .rotating-card-link {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .rotating-card-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .rotating-card-bg-image {
+  opacity: 0.05;
+}
+
+[data-theme="dark"] .rotating-card-dot {
+  background: #d5d5d5;
+}
+
+[data-theme="dark"] .rotating-card-dot.active {
+  background: #111111;
+}
+
+/* ── Timeline ── */
+[data-theme="dark"] .shared-timeline-section {
+  background: #fafafa;
+}
+
+[data-theme="dark"] .shared-timeline-line {
+  background: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .shared-timeline-card {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .shared-timeline-card:hover {
+  border-color: #cccccc;
+}
+
+[data-theme="dark"] .shared-timeline-icon,
+[data-theme="dark"] .shared-timeline-icon-1,
+[data-theme="dark"] .shared-timeline-icon-2,
+[data-theme="dark"] .shared-timeline-icon-3,
+[data-theme="dark"] .shared-timeline-icon-4 {
+  background: #f0f0f0 !important;
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .shared-timeline-year span {
+  color: #666666 !important;
+  background: #f0f0f0 !important;
+  border-color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .shared-timeline-card:nth-child(n) .shared-timeline-year span {
+  color: #666666 !important;
+  background: #f0f0f0 !important;
+  border-color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .shared-timeline-dot,
+[data-theme="dark"] .shared-timeline-card:nth-child(n) .shared-timeline-dot {
+  background: #ffffff;
+  border-color: #cccccc !important;
+}
+
+[data-theme="dark"] .shared-timeline-card-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-timeline-card-description {
+  color: #666666;
+}
+
+/* ── Product Page ── */
+[data-theme="dark"] .productpage-hero-section {
+  background: #ffffff !important;
+}
+
+[data-theme="dark"] .productpage-hero-title-main {
+  color: #111111;
+}
+
+[data-theme="dark"] .productpage-hero-description {
+  color: #666666;
+}
+
+[data-theme="dark"] .productpage-hero-badge {
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+}
+
+[data-theme="dark"] .productpage-hero-badge-text {
+  color: #666666;
+}
+
+[data-theme="dark"] .productpage-simple-section {
+  background: #fafafa !important;
+}
+
+[data-theme="dark"] .productpage-simple-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .productpage-simple-subtitle {
+  color: #666666;
+}
+
+[data-theme="dark"] .productpage-simple-card {
+  background: #ffffff;
+}
+
+[data-theme="dark"] .productpage-card-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .productpage-card-tagline {
+  color: #666666;
+}
+
+[data-theme="dark"] .productpage-card-overlay,
+[data-theme="dark"] .productpage-from-primary-80,
+[data-theme="dark"] .productpage-from-secondary-80,
+[data-theme="dark"] .productpage-from-accent-80,
+[data-theme="dark"] .productpage-from-purple-80 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent) !important;
+}
+
+[data-theme="dark"] .productpage-text-primary,
+[data-theme="dark"] .productpage-text-secondary,
+[data-theme="dark"] .productpage-text-accent,
+[data-theme="dark"] .productpage-text-purple {
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .productpage-learn-more-btn {
+  border-color: #111111 !important;
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .productpage-learn-more-btn:hover,
+[data-theme="dark"] .productpage-text-primary .productpage-learn-more-btn:hover,
+[data-theme="dark"] .productpage-text-secondary .productpage-learn-more-btn:hover,
+[data-theme="dark"] .productpage-text-accent .productpage-learn-more-btn:hover,
+[data-theme="dark"] .productpage-text-purple .productpage-learn-more-btn:hover {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+}
+
+[data-theme="dark"] .productpage-visit-btn {
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .productpage-features-section {
+  background: #ffffff !important;
+}
+
+[data-theme="dark"] .productpage-features-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .productpage-features-subtitle {
+  color: #666666;
+}
+
+[data-theme="dark"] .productpage-feature-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+[data-theme="dark"] .productpage-feature-card-icon,
+[data-theme="dark"] .productpage-feature-icon-1,
+[data-theme="dark"] .productpage-feature-icon-2,
+[data-theme="dark"] .productpage-feature-icon-3,
+[data-theme="dark"] .productpage-feature-icon-4 {
+  background: #f0f0f0 !important;
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .productpage-feature-card-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .productpage-feature-card-description {
+  color: #666666;
+}
+
+[data-theme="dark"] .productpage-modal-content {
+  background: #ffffff;
+}
+
+[data-theme="dark"] .productpage-modal-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .productpage-modal-subtitle {
+  color: #666666 !important;
+}
+
+[data-theme="dark"] .productpage-modal-description {
+  color: #666666;
+}
+
+[data-theme="dark"] .productpage-modal-features-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .productpage-modal-feature-item {
+  color: #666666;
+}
+
+[data-theme="dark"] .productpage-modal-feature-item svg {
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .productpage-modal-btn-primary {
+  background: #111111 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .productpage-modal-btn-secondary {
+  border-color: #e5e5e5;
+  color: #111111;
+}
+
+/* ── Services Page ── */
+[data-theme="dark"] .servicepage-energy-section {
+  background: #fafafa !important;
+}
+
+[data-theme="dark"] .servicepage-energy-card {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .servicepage-energy-card:hover {
+  border-color: #cccccc;
+}
+
+[data-theme="dark"] .servicepage-energy-card-icon {
+  background: #f0f0f0 !important;
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .servicepage-energy-card-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .servicepage-energy-card-description {
+  color: #666666;
+}
+
+[data-theme="dark"] .servicepage-energy-badge {
+  background: #f5f5f5 !important;
+  color: #666666 !important;
+}
+
+[data-theme="dark"] .servicepage-energy-badge .servicepage-hero-badge-text {
+  color: #666666 !important;
+}
+
+[data-theme="dark"] .servicepage-energy-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .servicepage-energy-subtitle {
+  color: #666666;
+}
+
+[data-theme="dark"] .servicepage-techpartner-section {
+  background: #ffffff;
+}
+
+[data-theme="dark"] .servicepage-techpartner-card {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .servicepage-techpartner-card:hover {
+  border-color: #cccccc;
+}
+
+[data-theme="dark"] .servicepage-techpartner-card-icon {
+  background: #f0f0f0 !important;
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .servicepage-techpartner-card-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .servicepage-techpartner-card-description {
+  color: #666666;
+}
+
+/* Energy story — flip to white bg */
+[data-theme="dark"] .servicepage-energy-story-section {
+  background: #f5f5f5 !important;
+}
+
+[data-theme="dark"] .servicepage-energy-story-bg-circle-1,
+[data-theme="dark"] .servicepage-energy-story-bg-circle-2 {
+  display: none;
+}
+
+[data-theme="dark"] .servicepage-energy-story-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .servicepage-energy-story-narrative p {
+  color: #555555;
+}
+
+[data-theme="dark"] .servicepage-energy-story-narrative strong {
+  color: #111111;
+}
+
+[data-theme="dark"] .servicepage-energy-story-highlight {
+  color: #111111 !important;
+  border-left-color: #111111;
+}
+
+[data-theme="dark"] .servicepage-energy-story-badge {
+  background: #e5e5e5;
+  color: #111111;
+}
+
+[data-theme="dark"] .servicepage-energy-credential-card {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .servicepage-energy-credential-card:hover {
+  background: #fafafa;
+  border-color: #cccccc;
+}
+
+[data-theme="dark"] .servicepage-energy-credential-icon {
+  background: #f0f0f0;
+  color: #111111;
+}
+
+[data-theme="dark"] .servicepage-energy-credential-text h4 {
+  color: #111111;
+}
+
+[data-theme="dark"] .servicepage-energy-credential-text p {
+  color: #666666;
+}
+
+[data-theme="dark"] .servicepage-energy-story-stat {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .servicepage-energy-story-stat-number {
+  color: #111111;
+}
+
+[data-theme="dark"] .servicepage-energy-story-stat p {
+  color: #666666;
+}
+
+/* ── About Page ── */
+[data-theme="dark"] .aboutpage-content-section {
+  background: #fafafa;
+}
+
+[data-theme="dark"] .aboutpage-content-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .aboutpage-content-badge {
+  background: #f0f0f0;
+  color: #666666;
+}
+
+[data-theme="dark"] .aboutpage-mission-card,
+[data-theme="dark"] .aboutpage-vision-card {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .aboutpage-mission-title,
+[data-theme="dark"] .aboutpage-vision-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .aboutpage-mission-statement,
+[data-theme="dark"] .aboutpage-vision-statement {
+  color: #333333;
+}
+
+[data-theme="dark"] .aboutpage-mission-description,
+[data-theme="dark"] .aboutpage-vision-description {
+  color: #666666;
+}
+
+[data-theme="dark"] .aboutpage-story-container {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .aboutpage-story-title,
+[data-theme="dark"] .aboutpage-story-journey-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .aboutpage-story-text,
+[data-theme="dark"] .aboutpage-story-journey-text {
+  color: #666666;
+}
+
+[data-theme="dark"] .aboutpage-story-quote {
+  color: #111111;
+}
+
+[data-theme="dark"] .aboutpage-hero-stat-number,
+[data-theme="dark"] .aboutpage-hero-stat-primary,
+[data-theme="dark"] .aboutpage-hero-stat-secondary,
+[data-theme="dark"] .aboutpage-hero-stat-accent {
+  color: #111111 !important;
+}
+
+[data-theme="dark"] .aboutpage-hero-stat-label {
+  color: #888888;
+}
+
+[data-theme="dark"] .aboutpage-team-section {
+  background: #ffffff;
+}
+
+[data-theme="dark"] .aboutpage-team-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .aboutpage-founder-name {
+  color: #111111;
+}
+
+[data-theme="dark"] .aboutpage-founder-role {
+  color: #666666;
+}
+
+[data-theme="dark"] .aboutpage-story-paragraph {
+  color: #666666;
+}
+
+[data-theme="dark"] .aboutpage-story-paragraph strong {
+  color: #111111;
+}
+
+/* ── Contact Page ── */
+/* The new Contact CSS uses CSS variables, so minimal overrides needed */
+[data-theme="dark"] .contactpage-methods-section {
+  background: #fafafa;
+}
+
+[data-theme="dark"] .contactpage-method-icon {
+  background: #f0f0f0;
+  color: #111111;
+}
+
+[data-theme="dark"] .contactpage-form-submit {
+  background: #111111;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .contactpage-form-submit-success {
+  background: #111111;
+}
+
+/* ── Footer ── */
+[data-theme="dark"] .clean-professional-footer {
+  background: #111111 !important;
+}
+
+[data-theme="dark"] .footer-background {
+  background: #111111 !important;
+}
+
+[data-theme="dark"] .footer-gradient-overlay {
+  display: none;
+}
+
+[data-theme="dark"] .footer-bottom {
+  border-top: 1px solid #333333;
+}
+
+/* Strip all colored icons in footer */
+[data-theme="dark"] .social-link svg,
+[data-theme="dark"] .social-link:nth-child(1) svg,
+[data-theme="dark"] .social-link:nth-child(2) svg,
+[data-theme="dark"] .social-link:nth-child(3) svg,
+[data-theme="dark"] .social-link:nth-child(4) svg {
+  color: #999999 !important;
+  background: none !important;
+}
+
+[data-theme="dark"] .social-link:hover svg,
+[data-theme="dark"] .social-link:nth-child(1):hover svg,
+[data-theme="dark"] .social-link:nth-child(2):hover svg,
+[data-theme="dark"] .social-link:nth-child(3):hover svg,
+[data-theme="dark"] .social-link:nth-child(4):hover svg {
+  color: #ffffff !important;
+  background: none !important;
+}
+
+[data-theme="dark"] .contact-icon,
+[data-theme="dark"] .contact-item:nth-child(1) .contact-icon,
+[data-theme="dark"] .contact-item:nth-child(2) .contact-icon,
+[data-theme="dark"] .contact-item:nth-child(3) .contact-icon,
+[data-theme="dark"] .contact-item:nth-child(4) .contact-icon {
+  color: #999999 !important;
+}
+
+[data-theme="dark"] .nav-link.active {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .gradient-text {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+[data-theme="dark"] .heart {
+  color: #999999 !important;
+}
+
+/* ── Logo — desaturate in mono mode ── */
+[data-theme="dark"] .navbar-logo-image,
+[data-theme="dark"] .logo-image {
+  filter: grayscale(1);
+}
+
+/* ── All SVG icons: force monochrome ── */
+[data-theme="dark"] .contactpage-info-card svg,
+[data-theme="dark"] .contactpage-why-icon svg {
+  color: #111111 !important;
+}
+
+/* ── Scrollbar ── */
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 6px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #d5d5d5;
+  border-radius: 3px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}

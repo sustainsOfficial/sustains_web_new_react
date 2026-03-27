@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { useTheme } from "../../context/ThemeContext";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +79,7 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* CTA Button */}
+            {/* CTA + Theme Toggle */}
             <div className="navbar-cta">
               <Link
                 to="/contact"
@@ -86,6 +88,12 @@ const Navbar = () => {
               >
                 Get Started
               </Link>
+              <button
+                className="navbar-theme-toggle"
+                onClick={toggleTheme}
+              >
+                {theme === "light" ? "Hate colors?" : "Want colors back?"}
+              </button>
             </div>
 
             {/* Mobile Menu Button */}

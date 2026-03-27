@@ -1,0 +1,208 @@
+.shared-contact-methods-section {
+  padding: 4rem 0;
+  background: #f9fafb;
+}
+
+.shared-contact-methods-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) { .shared-contact-methods-wrapper { padding: 0 1.5rem; } }
+@media (min-width: 1024px) { .shared-contact-methods-wrapper { padding: 0 2rem; } }
+
+.shared-contact-methods-grid {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .shared-contact-methods-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (min-width: 1024px) {
+  .shared-contact-methods-grid { grid-template-columns: repeat(4, 1fr) !important; }
+}
+
+/* Ensure animation wrapper divs participate in grid properly */
+.shared-contact-methods-grid > div {
+  height: 100%;
+}
+
+.shared-contact-method-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.shared-contact-method-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.shared-contact-method-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Color variants for the top bar */
+.shared-contact-method-1::before { background: #3b82f6; }
+.shared-contact-method-2::before { background: #10b981; }
+.shared-contact-method-3::before { background: #8b5cf6; }
+.shared-contact-method-4::before { background: #f59e0b; }
+
+.shared-contact-method-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+/* Icon with color */
+.shared-contact-method-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.shared-contact-method-icon-1 { color: #3b82f6; }
+.shared-contact-method-icon-2 { color: #10b981; }
+.shared-contact-method-icon-3 { color: #8b5cf6; }
+.shared-contact-method-icon-4 { color: #f59e0b; }
+
+.shared-contact-method-card:hover .shared-contact-method-icon-1 { background: rgba(59, 130, 246, 0.1); }
+.shared-contact-method-card:hover .shared-contact-method-icon-2 { background: rgba(16, 185, 129, 0.1); }
+.shared-contact-method-card:hover .shared-contact-method-icon-3 { background: rgba(139, 92, 246, 0.1); }
+.shared-contact-method-card:hover .shared-contact-method-icon-4 { background: rgba(245, 158, 11, 0.1); }
+
+.shared-contact-method-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.shared-contact-method-subtitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.shared-contact-method-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin-bottom: 1rem;
+}
+
+.shared-contact-method-detail {
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.shared-contact-method-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: auto;
+  transition: all 0.2s ease;
+}
+
+.shared-contact-method-1 .shared-contact-method-action { color: #3b82f6; }
+.shared-contact-method-2 .shared-contact-method-action { color: #10b981; }
+.shared-contact-method-3 .shared-contact-method-action { color: #8b5cf6; }
+.shared-contact-method-4 .shared-contact-method-action { color: #f59e0b; }
+
+.shared-contact-method-card:hover .shared-contact-method-action {
+  gap: 0.625rem;
+}
+
+/* ── Monochrome theme ── */
+[data-theme="dark"] .shared-contact-methods-section {
+  background: #f5f5f5;
+}
+
+[data-theme="dark"] .shared-contact-method-card {
+  background: #ffffff;
+  border-color: #d5d5d5;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .shared-contact-method-card:hover {
+  border-color: #999999;
+  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .shared-contact-method-card::before,
+[data-theme="dark"] .shared-contact-method-1::before,
+[data-theme="dark"] .shared-contact-method-2::before,
+[data-theme="dark"] .shared-contact-method-3::before,
+[data-theme="dark"] .shared-contact-method-4::before {
+  background: #111111;
+}
+
+[data-theme="dark"] .shared-contact-method-icon,
+[data-theme="dark"] .shared-contact-method-icon-1,
+[data-theme="dark"] .shared-contact-method-icon-2,
+[data-theme="dark"] .shared-contact-method-icon-3,
+[data-theme="dark"] .shared-contact-method-icon-4 {
+  background: #f0f0f0;
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-contact-method-card:hover .shared-contact-method-icon-1,
+[data-theme="dark"] .shared-contact-method-card:hover .shared-contact-method-icon-2,
+[data-theme="dark"] .shared-contact-method-card:hover .shared-contact-method-icon-3,
+[data-theme="dark"] .shared-contact-method-card:hover .shared-contact-method-icon-4 {
+  background: #e5e5e5;
+}
+
+[data-theme="dark"] .shared-contact-method-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-contact-method-subtitle {
+  color: #666666;
+}
+
+[data-theme="dark"] .shared-contact-method-detail {
+  color: #555555;
+}
+
+[data-theme="dark"] .shared-contact-method-1 .shared-contact-method-action,
+[data-theme="dark"] .shared-contact-method-2 .shared-contact-method-action,
+[data-theme="dark"] .shared-contact-method-3 .shared-contact-method-action,
+[data-theme="dark"] .shared-contact-method-4 .shared-contact-method-action {
+  color: #111111;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .shared-contact-methods-section { padding: 2.5rem 0; }
+  .shared-contact-method-card { padding: 1.25rem; }
+}

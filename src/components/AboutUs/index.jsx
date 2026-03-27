@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Brain,
@@ -25,6 +25,90 @@ import Timeline from "../shared/Timeline";
 import FeatureGrid from "../shared/FeatureGrid";
 import { FadeIn, StaggerContainer, StaggerItem } from "../shared/AnimationHelpers";
 import "./index.css";
+
+const teamMembers = [
+  { name: "Arjun", image: "https://res.cloudinary.com/dffu1ungl/image/upload/v1756464566/Arjun_ofkmcg.jpg" },
+  { name: "Rohith", image: "/Rohith.JPG" },
+  { name: "Sreenidhi", image: "/Sreenidhi.JPG" },
+  { name: "Kiran", image: "/Kiran.PNG" },
+  { name: "Reshma", image: "/Reshma.JPG" },
+];
+
+const TeamSlideshow = () => {
+  const [current, setCurrent] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFading(true);
+      setTimeout(() => {
+        setCurrent((prev) => (prev + 1) % teamMembers.length);
+        setFading(false);
+      }, 400);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const member = teamMembers[current];
+
+  return (
+    <div className="aboutpage-team-clean-grid">
+      {/* Left — Rotating Team Photo */}
+      <div className="aboutpage-founder-clean-section">
+        <div className="aboutpage-founder-image-container">
+          <img
+            src={member.image}
+            alt={member.name}
+            className={`aboutpage-founder-image aboutpage-founder-image-bw ${fading ? "aboutpage-founder-image-fade" : ""}`}
+          />
+        </div>
+        <div className="aboutpage-founder-info">
+          <h3 className={`aboutpage-founder-name ${fading ? "aboutpage-founder-name-fade" : ""}`}>
+            {member.name}
+          </h3>
+          <p className="aboutpage-founder-role">Our Squad</p>
+        </div>
+        <div className="aboutpage-team-dots">
+          {teamMembers.map((_, i) => (
+            <button
+              key={i}
+              className={`aboutpage-team-dot ${i === current ? "aboutpage-team-dot-active" : ""}`}
+              onClick={() => { setFading(true); setTimeout(() => { setCurrent(i); setFading(false); }, 400); }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Right — Story */}
+      <div className="aboutpage-story-clean-section">
+        <div className="aboutpage-story-content">
+          <p className="aboutpage-story-paragraph">
+            <strong>Sustains.ai</strong> was founded in{" "}
+            <strong>January 2025</strong> by a team that believed
+            analytics wasn't just about numbers — it was about building
+            tools that truly understand the industries they serve. We
+            started in <strong>energy</strong> because that's where our
+            deepest domain expertise lived, and expanded into{" "}
+            <strong>wealth management, CRM, and travel tech</strong>{" "}
+            as we proved the model.
+          </p>
+          <p className="aboutpage-story-paragraph">
+            Today, we're a{" "}
+            <strong>growing team of 10+ professionals</strong> —
+            including VP-level leaders from major banks, asset management
+            firms, energy project developers, and global consultancies.
+            Together, we're driving{" "}
+            <strong>
+              product development, energy consulting, tech partnerships,
+              and client delivery
+            </strong>{" "}
+            across multiple industries.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const About = () => {
   const values = [
@@ -299,55 +383,7 @@ const About = () => {
           </FadeIn>
 
           <FadeIn>
-            <div className="aboutpage-team-clean-grid">
-              {/* Left — Founder Photo */}
-              <div className="aboutpage-founder-clean-section">
-                <div className="aboutpage-founder-image-container">
-                  <img
-                    src="https://res.cloudinary.com/dffu1ungl/image/upload/v1756464566/Arjun_ofkmcg.jpg"
-                    alt="Founding team"
-                    className="aboutpage-founder-image"
-                  />
-                </div>
-                <div className="aboutpage-founder-info">
-                  <h3 className="aboutpage-founder-name">Our Founding Team</h3>
-                  <p className="aboutpage-founder-role">
-                    Energy Enthusiasts & Technologists
-                  </p>
-                </div>
-              </div>
-
-              {/* Right — Story */}
-              <div className="aboutpage-story-clean-section">
-                <div className="aboutpage-story-content">
-                  <p className="aboutpage-story-paragraph">
-                    <strong>Sustains.ai</strong> was founded in{" "}
-                    <strong>January 2025</strong> by a team that believed
-                    analytics wasn't just about numbers — it was about building
-                    tools that truly understand the industries they serve. We
-                    started in <strong>energy</strong> because that's where our
-                    deepest domain expertise lived, and expanded into{" "}
-                    <strong>
-                      wealth management, CRM, and travel tech
-                    </strong>{" "}
-                    as we proved the model.
-                  </p>
-
-                  <p className="aboutpage-story-paragraph">
-                    Today, we're a{" "}
-                    <strong>growing team of 10+ professionals</strong> —
-                    including VP-level leaders from major banks, asset management
-                    firms, energy project developers, and global consultancies.
-                    Together, we're driving{" "}
-                    <strong>
-                      product development, energy consulting, tech partnerships,
-                      and client delivery
-                    </strong>{" "}
-                    across multiple industries.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <TeamSlideshow />
           </FadeIn>
         </div>
       </section>

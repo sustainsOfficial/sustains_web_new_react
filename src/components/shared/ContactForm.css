@@ -1,0 +1,240 @@
+.shared-contactform-section {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.shared-contactform-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) { .shared-contactform-wrapper { padding: 0 1.5rem; } }
+@media (min-width: 1024px) { .shared-contactform-wrapper { padding: 0 2rem; } }
+
+.shared-contactform-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .shared-contactform-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+  }
+}
+
+/* Left info */
+.shared-contactform-info-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.shared-contactform-info-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.shared-contactform-info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.shared-contactform-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.shared-contactform-info-icon {
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Colored icons in color theme */
+.shared-contactform-info-item-1 .shared-contactform-info-icon { color: #3b82f6; }
+.shared-contactform-info-item-2 .shared-contactform-info-icon { color: #10b981; }
+.shared-contactform-info-item-3 .shared-contactform-info-icon { color: #f59e0b; }
+.shared-contactform-info-item-4 .shared-contactform-info-icon { color: #8b5cf6; }
+
+/* Right form card */
+.shared-contactform-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1.25rem;
+  padding: 2rem;
+}
+
+.shared-contactform-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .shared-contactform-row { grid-template-columns: 1fr; }
+}
+
+.shared-contactform-group {
+  margin-bottom: 1.25rem;
+}
+
+.shared-contactform-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 0.375rem;
+}
+
+.shared-contactform-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.625rem;
+  font-size: 0.9rem;
+  color: #111827;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.shared-contactform-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+.shared-contactform-input::placeholder {
+  color: #9ca3af;
+}
+
+.shared-contactform-textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+select.shared-contactform-input {
+  appearance: auto;
+}
+
+/* Submit button — gradient in color mode */
+.shared-contactform-submit {
+  width: 100%;
+  padding: 0.875rem;
+  border-radius: 0.625rem;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: #ffffff;
+  font-family: inherit;
+  box-shadow: 0 4px 12px -2px rgba(59, 130, 246, 0.25);
+}
+
+.shared-contactform-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -4px rgba(59, 130, 246, 0.3);
+}
+
+.shared-contactform-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.shared-contactform-submit-success {
+  background: #10b981;
+  box-shadow: 0 4px 12px -2px rgba(16, 185, 129, 0.25);
+}
+
+.shared-contactform-message {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.shared-contactform-message-success {
+  color: #065f46;
+  background: #ecfdf5;
+}
+
+.shared-contactform-message-error {
+  color: #991b1b;
+  background: #fef2f2;
+}
+
+/* ── Monochrome theme ── */
+[data-theme="dark"] .shared-contactform-section {
+  background: #ffffff;
+}
+
+[data-theme="dark"] .shared-contactform-info-title {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-contactform-info-subtitle {
+  color: #666666;
+}
+
+[data-theme="dark"] .shared-contactform-info-item {
+  color: #555555;
+}
+
+[data-theme="dark"] .shared-contactform-info-item-1 .shared-contactform-info-icon,
+[data-theme="dark"] .shared-contactform-info-item-2 .shared-contactform-info-icon,
+[data-theme="dark"] .shared-contactform-info-item-3 .shared-contactform-info-icon,
+[data-theme="dark"] .shared-contactform-info-item-4 .shared-contactform-info-icon {
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-contactform-card {
+  border-color: #e5e5e5;
+}
+
+[data-theme="dark"] .shared-contactform-input {
+  border-color: #d5d5d5;
+  color: #111111;
+}
+
+[data-theme="dark"] .shared-contactform-input:focus {
+  border-color: #111111;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .shared-contactform-submit {
+  background: #111111;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .shared-contactform-submit:hover {
+  box-shadow: none;
+}
+
+[data-theme="dark"] .shared-contactform-submit-success {
+  background: #111111;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .shared-contactform-section { padding: 2.5rem 0; }
+  .shared-contactform-card { padding: 1.5rem; }
+  .shared-contactform-info-title { font-size: 1.5rem; }
+}

@@ -885,6 +885,7 @@
   margin-bottom: 0.5rem;
   letter-spacing: -0.025em;
   line-height: 1.2;
+  transition: opacity 0.4s ease;
 }
 
 .aboutpage-founder-role {
@@ -922,6 +923,56 @@
 .aboutpage-story-paragraph strong {
   color: #0f172a;
   font-weight: 600;
+}
+
+/* Team Photo Slideshow — B&W with fade */
+.aboutpage-founder-image-bw {
+  filter: grayscale(1);
+  transition: opacity 0.4s ease, filter 0.3s ease;
+}
+
+.aboutpage-founder-image-bw:hover {
+  filter: grayscale(0.4);
+}
+
+.aboutpage-founder-image-fade {
+  opacity: 0;
+}
+
+.aboutpage-founder-name-fade {
+  opacity: 0;
+}
+
+/* Navigation dots */
+.aboutpage-team-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.aboutpage-team-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #d1d5db;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.aboutpage-team-dot-active {
+  background: #111827;
+  transform: scale(1.3);
+}
+
+[data-theme="dark"] .aboutpage-team-dot {
+  background: #cccccc;
+}
+
+[data-theme="dark"] .aboutpage-team-dot-active {
+  background: #111111;
 }
 
 /* CTA Section */

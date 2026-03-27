@@ -1,6 +1,6 @@
 .shared-featuregrid-section {
   padding: 4rem 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: #f9fafb;
 }
 
 .shared-featuregrid-wrapper {
@@ -36,34 +36,25 @@
 }
 
 .shared-featuregrid-card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(16px);
-  border-radius: 1.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
   padding: 2rem;
   text-align: center;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
   height: 100%;
 }
 
 .shared-featuregrid-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.shared-featuregrid-card:hover .shared-featuregrid-card-overlay {
-  opacity: 1;
+  display: none;
 }
 
 .shared-featuregrid-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
 }
 
 .shared-featuregrid-icon {
@@ -74,33 +65,23 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
-  transition: transform 0.3s ease;
+  background: #f3f4f6;
+  transition: all 0.3s ease;
 }
 
 .shared-featuregrid-card:hover .shared-featuregrid-icon {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* 4 color variants for the icons */
-.shared-featuregrid-icon-1 {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  color: #ffffff;
-}
+.shared-featuregrid-icon-1 { color: #3b82f6; }
+.shared-featuregrid-icon-2 { color: #10b981; }
+.shared-featuregrid-icon-3 { color: #8b5cf6; }
+.shared-featuregrid-icon-4 { color: #f59e0b; }
 
-.shared-featuregrid-icon-2 {
-  background: linear-gradient(135deg, #f59e0b, #ef4444);
-  color: #ffffff;
-}
-
-.shared-featuregrid-icon-3 {
-  background: linear-gradient(135deg, #8b5cf6, #ec4899);
-  color: #ffffff;
-}
-
-.shared-featuregrid-icon-4 {
-  background: linear-gradient(135deg, #10b981, #06b6d4);
-  color: #ffffff;
-}
+.shared-featuregrid-card:hover .shared-featuregrid-icon-1 { background: rgba(59, 130, 246, 0.1); }
+.shared-featuregrid-card:hover .shared-featuregrid-icon-2 { background: rgba(16, 185, 129, 0.1); }
+.shared-featuregrid-card:hover .shared-featuregrid-icon-3 { background: rgba(139, 92, 246, 0.1); }
+.shared-featuregrid-card:hover .shared-featuregrid-icon-4 { background: rgba(245, 158, 11, 0.1); }
 
 .shared-featuregrid-card-title {
   font-size: 1.125rem;
@@ -122,15 +103,20 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(to right, #3b82f6, #8b5cf6, #f59e0b);
+  height: 2px;
+  background: #d1d5db;
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .shared-featuregrid-card:hover .shared-featuregrid-card-bar {
   transform: scaleX(1);
 }
+
+.shared-featuregrid-card:nth-child(1) .shared-featuregrid-card-bar { background: #3b82f6; }
+.shared-featuregrid-card:nth-child(2) .shared-featuregrid-card-bar { background: #10b981; }
+.shared-featuregrid-card:nth-child(3) .shared-featuregrid-card-bar { background: #8b5cf6; }
+.shared-featuregrid-card:nth-child(4) .shared-featuregrid-card-bar { background: #f59e0b; }
 
 @media (max-width: 640px) {
   .shared-featuregrid-section { padding: 2.5rem 0; }

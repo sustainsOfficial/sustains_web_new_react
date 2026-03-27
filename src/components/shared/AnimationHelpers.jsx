@@ -25,7 +25,7 @@ export function FadeIn({ children, delay = 0, direction = "up", className = "" }
   );
 }
 
-export function StaggerContainer({ children, className = "", stagger = 0.1 }) {
+export function StaggerContainer({ children, className = "", style, stagger = 0.1 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -33,6 +33,7 @@ export function StaggerContainer({ children, className = "", stagger = 0.1 }) {
     <motion.div
       ref={ref}
       className={className}
+      style={style}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={{
