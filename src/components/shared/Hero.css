@@ -93,18 +93,10 @@
 
 .shared-hero-title-gradient {
   display: block;
-  background: linear-gradient(45deg, #3b82f6, #10b981, #8b5cf6, #f59e0b);
-  background-size: 400% 400%;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: sharedGradientShift 3s ease infinite;
-}
-
-@keyframes sharedGradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 .shared-hero-description {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Zap,
@@ -15,6 +16,10 @@ import {
   Bot,
   Puzzle,
   RefreshCw,
+  Battery,
+  Wallet,
+  MessageSquare,
+  Plane,
 } from "lucide-react";
 
 import Hero from "../shared/Hero";
@@ -23,14 +28,13 @@ import ClientStrip from "../shared/ClientStrip";
 import TestimonialGrid from "../shared/TestimonialGrid";
 import FeatureGrid from "../shared/FeatureGrid";
 import BenefitsGrid from "../shared/BenefitsGrid";
-import KeyboardHero from "../shared/KeyboardHero";
 import "./index.css";
 
 const Home = () => {
 
   return (
     <div className="homepage-container">
-      {/* Hero — centered with keyboard */}
+      {/* Hero */}
       <Hero
         animated
         badge={{ icon: <Sparkles size={16} />, text: "AI-Powered Platforms" }}
@@ -51,11 +55,29 @@ const Home = () => {
             variant: "secondary",
           },
         ]}
-      >
-        <div style={{ marginTop: "2rem" }}>
-          <KeyboardHero />
-        </div>
-      </Hero>
+        rightContent={
+          <div className="hero-products">
+            {[
+              { name: "Nidhi", desc: "Wealth Management", tag: "AI-Powered", icon: <Wallet size={22} />, accent: "blue", to: "/products" },
+              { name: "Nudge", desc: "Energy BD Platform", tag: "MW-Scale", icon: <Battery size={22} />, accent: "emerald", to: "/products" },
+              { name: "Sailbot", desc: "Smart CRM", tag: "Focused Teams", icon: <MessageSquare size={22} />, accent: "violet", to: "/products" },
+              { name: "Azyro", desc: "Tour Management", tag: "End-to-End", icon: <Plane size={22} />, accent: "amber", to: "/products" },
+            ].map((product) => (
+              <Link key={product.name} to={product.to} className={`hero-product-card hero-product-${product.accent}`}>
+                <div className="hero-product-icon">{product.icon}</div>
+                <div className="hero-product-body">
+                  <div className="hero-product-header">
+                    <span className="hero-product-name">{product.name}</span>
+                    <span className="hero-product-tag">{product.tag}</span>
+                  </div>
+                  <span className="hero-product-desc">{product.desc}</span>
+                </div>
+                <ArrowRight size={16} className="hero-product-arrow" />
+              </Link>
+            ))}
+          </div>
+        }
+      />
 
       {/* Why Choose Sustains */}
       <FeatureGrid
