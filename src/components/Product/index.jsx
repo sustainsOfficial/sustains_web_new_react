@@ -86,8 +86,8 @@ class Products extends Component {
         icon: <Wallet size={32} />,
         image:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-        description: "API Platform for Wealth Management",
-        tagline: "AI-Powered Portfolio Intelligence for a Sustainable Future",
+        description: "Wealth Portfolio Intelligence",
+        tagline: "AI-Powered Wealth Portfolio Analytics",
         details: {
           subtitle: "Wealth Management API Platform",
           content:
@@ -111,8 +111,8 @@ class Products extends Component {
         icon: <BatteryCharging size={32} />,
         image:
           "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-        description: "End-to-End Energy Management",
-        tagline: "Accelerate Your Energy Deals",
+        description: "Energy Portfolio Management",
+        tagline: "Manage Your Energy Project Pipeline",
         details: {
           subtitle: "Energy BD CRM Platform",
           content:
@@ -135,10 +135,10 @@ class Products extends Component {
         icon: <Users size={32} />,
         image:
           "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-        description: "CRM for Focused Teams",
-        tagline: "A Calm CRM Workspace for Focused Teams",
+        description: "Client Portfolio Management",
+        tagline: "Your Client Relationships, as a Portfolio",
         details: {
-          subtitle: "Your CRM, Simplified",
+          subtitle: "Client Portfolio CRM",
           content:
             "Calm, distraction-free CRM with AI insights, pipeline management, and revenue tracking — without the bloat of enterprise CRMs.",
           features: [
@@ -159,8 +159,8 @@ class Products extends Component {
         icon: <Plane size={32} />,
         image:
           "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-        description: "Tour Management Platform",
-        tagline: "Tour Management, Made Simple",
+        description: "Tour Portfolio Management",
+        tagline: "Tour Operations, Portfolio-Style",
         details: {
           subtitle: "Purpose-Built for Tour Operators",
           content:
@@ -206,10 +206,11 @@ class Products extends Component {
       <div className="productpage-container">
         {/* Hero */}
         <Hero
+          className="has-bg-image products-hero-bg"
           badge={{ icon: <BarChart3 size={16} />, text: "Our Product Suite" }}
-          titleMain="Purpose-Built Products"
-          titleGradient="Across Multiple Verticals"
-          description="Focused, AI-powered products — each purpose-built for its industry."
+          titleMain="Portfolio Intelligence"
+          titleGradient="Across Every Vertical"
+          description="Four specialized platforms — each built to manage portfolios in its domain."
         />
 
         {/* Main Products Section */}
@@ -221,7 +222,7 @@ class Products extends Component {
                 <span className="productpage-title-gradient">Products</span>
               </h2>
               <p className="productpage-simple-subtitle">
-                Four specialized platforms, each purpose-built for its industry
+                Four specialized platforms, each built to manage portfolios in its domain
               </p>
             </div>
 

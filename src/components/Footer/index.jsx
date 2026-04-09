@@ -64,21 +64,20 @@ const Footer = () => {
             <div className="footer-brand">
               <div className="brand-logo">
                 <img
-                  src="https://res.cloudinary.com/dffu1ungl/image/upload/v1756371951/sustains_logo_gradient_transparent_highres_szhvxf.png"
-                  alt="Sustains.ai"
+                  src="/logo/sustain_white_tm_transparent_bg.png"
+                  alt="Sustains"
                   className="logo-image"
                 />
               </div>
 
               <h3 className="brand-title">
-                Shaping Tomorrow's{" "}
-                <span className="gradient-text">Sustainable Future</span>
+                Portfolio Intelligence{" "}
+                <span className="gradient-text">Across Industries</span>
               </h3>
 
               <p className="brand-description">
-                AI-powered portfolio intelligence transforming wealth, energy,
-                and infrastructure sectors with cutting-edge sustainability
-                solutions.
+                Smart portfolio management for wealth, energy, CRM, and travel
+                — built by domain experts who think in portfolios.
               </p>
             </div>
 

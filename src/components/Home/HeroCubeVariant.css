@@ -1,0 +1,150 @@
+/* ═══ HeroCubeVariant — CSS 3D Rubik's cube with 3x3 plastic tiles ═══ */
+
+.hero-cube-scene {
+  --cube-size: 260px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 32rem;
+  margin: 0 auto;
+  perspective: 1200px;
+  perspective-origin: 50% 42%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-cube {
+  position: relative;
+  width: var(--cube-size);
+  height: var(--cube-size);
+  transform-style: preserve-3d;
+  animation: heroCubeSpin 38s linear infinite;
+  will-change: transform;
+}
+
+.hero-cube-scene:hover .hero-cube {
+  animation-play-state: paused;
+}
+
+@keyframes heroCubeSpin {
+  0%   { transform: rotateX(-18deg) rotateY(0deg); }
+  100% { transform: rotateX(-18deg) rotateY(360deg); }
+}
+
+/* ── A single face: 3x3 grid of tiles on a dark cube body ── */
+.hero-cube-face {
+  position: absolute;
+  inset: 0;
+  width: var(--cube-size);
+  height: var(--cube-size);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 6px;
+  padding: 6px;
+  background: #0a0a0a;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 0 20px rgba(0, 0, 0, 0.4);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Face positions — translate half the cube-size along each axis */
+.hero-cube-face-front  { transform: translateZ(calc(var(--cube-size) / 2)); }
+.hero-cube-face-back   { transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2)); }
+.hero-cube-face-right  { transform: rotateY(90deg)  translateZ(calc(var(--cube-size) / 2)); }
+.hero-cube-face-left   { transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2)); }
+.hero-cube-face-top    { transform: rotateX(90deg)  translateZ(calc(var(--cube-size) / 2)); }
+.hero-cube-face-bottom { transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2)); }
+
+/* ── A single plastic tile ── */
+.hero-cube-tile {
+  border-radius: 14%;
+  /* Plastic effect: gradient + inset highlight (top) + inset shadow (bottom) */
+  box-shadow:
+    inset 0 -4px 7px rgba(0, 0, 0, 0.32),
+    inset 0 3px 5px rgba(255, 255, 255, 0.35),
+    0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Per-face tile colors (all 9 tiles per face share the same color) ── */
+.hero-cube-face-nidhi .hero-cube-tile {
+  background: linear-gradient(145deg, #c4b5fd 0%, #8b5cf6 45%, #6d28d9 100%);
+}
+.hero-cube-face-nudge .hero-cube-tile {
+  background: linear-gradient(145deg, #6ee7b7 0%, #10b981 45%, #047857 100%);
+}
+.hero-cube-face-sailbot .hero-cube-tile {
+  background: linear-gradient(145deg, #93c5fd 0%, #3b82f6 45%, #1d4ed8 100%);
+}
+.hero-cube-face-azyro .hero-cube-tile {
+  background: linear-gradient(145deg, #fdba74 0%, #f97316 45%, #c2410c 100%);
+}
+.hero-cube-face-partnership .hero-cube-tile {
+  background: linear-gradient(145deg, #f9a8d4 0%, #ec4899 45%, #9d174d 100%);
+}
+.hero-cube-face-consultancy .hero-cube-tile {
+  background: linear-gradient(145deg, #cbd5e1 0%, #64748b 45%, #1e293b 100%);
+}
+
+/* ── Center overlay: icon + product name ── */
+.hero-cube-face-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  color: #ffffff;
+  z-index: 2;
+  /* Strong text-shadow so text reads over any tile color */
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.7),
+    0 0 16px rgba(0, 0, 0, 0.4);
+}
+
+.hero-cube-face-icon {
+  color: #ffffff;
+  margin-bottom: 0.625rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.55));
+}
+
+.hero-cube-face-name {
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.hero-cube-face-sublabel {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-top: 0.5rem;
+  opacity: 0.92;
+}
+
+/* ── Responsive: scale down the cube on smaller screens ── */
+@media (max-width: 1023px) {
+  .hero-cube-scene { --cube-size: 220px; }
+  .hero-cube-face-name { font-size: 1.5rem; }
+  .hero-cube-face { gap: 5px; padding: 5px; }
+}
+
+@media (max-width: 640px) {
+  .hero-cube-scene {
+    --cube-size: 180px;
+    max-width: 24rem;
+  }
+  .hero-cube-face-name { font-size: 1.25rem; }
+  .hero-cube-face-icon { margin-bottom: 0.5rem; }
+  .hero-cube-face { gap: 4px; padding: 4px; }
+}

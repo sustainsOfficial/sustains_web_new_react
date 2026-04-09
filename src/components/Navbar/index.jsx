@@ -57,8 +57,8 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="navbar-logo" onClick={handleNavClick}>
               <img
-                src="https://res.cloudinary.com/dffu1ungl/image/upload/v1756371951/sustains_logo_gradient_transparent_highres_szhvxf.png"
-                alt="Sustains.ai"
+                src="/logo/colorful_logo.png"
+                alt="Sustains"
                 className="navbar-logo-image"
               />
             </Link>

@@ -3,6 +3,11 @@
   background: linear-gradient(to bottom, #f8fafc, #ffffff);
 }
 
+/* Hero background image — overlay + positioning from .has-bg-image helper */
+.services-hero-bg {
+  background-image: url("/services.jpg");
+}
+
 /* Hero Section*/
 .servicepage-hero-section {
   padding-top: 6rem;
@@ -224,6 +229,9 @@
   border-radius: 1rem;
   padding: 1.75rem;
   transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .servicepage-techpartner-card:hover {
@@ -318,10 +326,10 @@
 /* ========== Energy Origin Story Section ========== */
 .servicepage-energy-story-section {
   position: relative;
-  padding: 5rem 0;
+  padding: 7rem 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-  color: #ffffff;
+  background: #ffffff;
+  color: #0f172a;
 }
 
 .servicepage-energy-story-wrapper {
@@ -355,23 +363,23 @@
 .servicepage-energy-story-bg-circle-1 {
   position: absolute;
   top: -10%;
-  right: -5%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+  right: -10%;
+  width: 28rem;
+  height: 28rem;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
   border-radius: 50%;
-  filter: blur(40px);
+  filter: blur(80px);
 }
 
 .servicepage-energy-story-bg-circle-2 {
   position: absolute;
   bottom: -15%;
-  left: -8%;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  left: -10%;
+  width: 24rem;
+  height: 24rem;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
   border-radius: 50%;
-  filter: blur(40px);
+  filter: blur(80px);
 }
 
 /* Content grid: story left, credentials right */
@@ -399,10 +407,10 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(16, 185, 129, 0.15);
+  background: rgba(16, 185, 129, 0.12);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  color: #34d399;
+  color: #059669;
   font-size: 0.875rem;
   font-weight: 600;
   width: fit-content;
@@ -414,7 +422,7 @@
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 2rem;
-  color: #ffffff;
+  color: #0f172a;
 }
 
 @media (min-width: 768px) {
@@ -432,19 +440,19 @@
 .servicepage-energy-story-narrative p {
   font-size: 1.0625rem;
   line-height: 1.8;
-  color: #cbd5e1;
+  color: #475569;
   margin-bottom: 1.25rem;
 }
 
 .servicepage-energy-story-narrative strong {
-  color: #ffffff;
+  color: #0f172a;
   font-weight: 600;
 }
 
 .servicepage-energy-story-highlight {
   font-size: 1.125rem !important;
   font-weight: 600 !important;
-  color: #34d399 !important;
+  color: #059669 !important;
   border-left: 3px solid #10b981;
   padding-left: 1rem;
   margin-top: 0.5rem;
@@ -467,17 +475,19 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid #eef0f3;
   border-radius: 1rem;
   padding: 1.25rem;
   transition: all 0.3s ease;
   cursor: default;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
 .servicepage-energy-credential-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(16, 185, 129, 0.3);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.1);
+  transform: translateY(-2px);
 }
 
 .servicepage-energy-credential-icon {
@@ -488,27 +498,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.15));
-  color: #34d399;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(59, 130, 246, 0.1));
+  color: #059669;
+}
+
+.servicepage-energy-credential-text {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
 }
 
 .servicepage-energy-credential-text h4 {
   font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.25rem;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+  text-align: left;
 }
 
 .servicepage-energy-credential-text p {
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: #6b7280;
   line-height: 1.5;
+  margin: 0;
+  text-align: left;
 }
 
 /* Bottom stat callout */
 .servicepage-energy-story-stat {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.08));
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(59, 130, 246, 0.06));
+  border: 1px solid rgba(16, 185, 129, 0.22);
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: center;
@@ -521,13 +540,13 @@
   gap: 0.5rem;
   font-size: 1.125rem;
   font-weight: 700;
-  color: #34d399;
+  color: #059669;
   margin-bottom: 0.5rem;
 }
 
 .servicepage-energy-story-stat p {
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: #6b7280;
   line-height: 1.5;
   margin: 0;
 }
@@ -549,8 +568,8 @@
 
 /* ========== Energy Projects Section ========== */
 .servicepage-energy-section {
-  padding: 4rem 0;
-  background: linear-gradient(to bottom right, #f8fafc, #f0fdf4, #f8fafc);
+  padding: 6.5rem 0;
+  background: #fafbfc;
 }
 
 .servicepage-energy-wrapper {
@@ -633,6 +652,7 @@
   gap: 1rem;
   align-items: flex-start;
   transition: all 0.3s ease;
+  height: 100%;
 }
 
 .servicepage-energy-card:hover {

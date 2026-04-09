@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Zap,
@@ -16,10 +15,6 @@ import {
   Bot,
   Puzzle,
   RefreshCw,
-  Battery,
-  Wallet,
-  MessageSquare,
-  Plane,
 } from "lucide-react";
 
 import Hero from "../shared/Hero";
@@ -37,10 +32,11 @@ const Home = () => {
       {/* Hero */}
       <Hero
         animated
-        badge={{ icon: <Sparkles size={16} />, text: "AI-Powered Platforms" }}
-        titleMain="Sustaining Energy."
-        titleGradient="Sustaining Wealth."
-        description="Purpose-built software by domain experts — for energy, wealth, CRM, and travel."
+        className="has-bg-image home-hero-bg"
+        badge={{ icon: <Sparkles size={16} />, text: "Portfolio Intelligence" }}
+        titleMain="Portfolio Intelligence"
+        titleGradient="For Every Sector"
+        description="From wealth and energy to CRM and travel — we bring portfolio-first thinking to every sector."
         buttons={[
           {
             to: "/products",
@@ -50,65 +46,43 @@ const Home = () => {
           },
           {
             to: "/contact",
-            label: "Book a Demo",
+            label: "Request Demo",
             icon: <BarChart3 size={20} />,
             variant: "secondary",
           },
         ]}
-        rightContent={
-          <div className="hero-products">
-            {[
-              { name: "Nidhi", desc: "Wealth Management", tag: "AI-Powered", icon: <Wallet size={22} />, accent: "blue", to: "/products" },
-              { name: "Nudge", desc: "Energy BD Platform", tag: "MW-Scale", icon: <Battery size={22} />, accent: "emerald", to: "/products" },
-              { name: "Sailbot", desc: "Smart CRM", tag: "Focused Teams", icon: <MessageSquare size={22} />, accent: "violet", to: "/products" },
-              { name: "Azyro", desc: "Tour Management", tag: "End-to-End", icon: <Plane size={22} />, accent: "amber", to: "/products" },
-            ].map((product) => (
-              <Link key={product.name} to={product.to} className={`hero-product-card hero-product-${product.accent}`}>
-                <div className="hero-product-icon">{product.icon}</div>
-                <div className="hero-product-body">
-                  <div className="hero-product-header">
-                    <span className="hero-product-name">{product.name}</span>
-                    <span className="hero-product-tag">{product.tag}</span>
-                  </div>
-                  <span className="hero-product-desc">{product.desc}</span>
-                </div>
-                <ArrowRight size={16} className="hero-product-arrow" />
-              </Link>
-            ))}
-          </div>
-        }
       />
 
       {/* Why Choose Sustains */}
       <FeatureGrid
-        badge={{ icon: <Star size={16} />, text: "Why Choose Sustains.ai" }}
-        title="Purpose-Built Software for"
+        badge={{ icon: <Star size={16} />, text: "Why Choose Sustains" }}
+        title="Portfolio-First Thinking for"
         titleGradient="Real Industries"
-        subtitle="Dedicated platforms for specific industries — built by people who understand the domain."
+        subtitle="We think in portfolios — assets, risks, and returns — across every sector we serve."
         features={[
           {
             icon: <TrendingUp size={24} />,
-            title: "Domain-First",
+            title: "Portfolio-First",
             description:
-              "We understand the industry before writing code",
+              "We think in portfolios — assets, risks, and returns",
           },
           {
             icon: <Zap size={24} />,
-            title: "Practical AI",
+            title: "Domain Expertise",
             description:
-              "Intelligence that solves real workflows, not buzzwords",
+              "Built by practitioners from energy, finance, and consulting",
           },
           {
             icon: <Users size={24} />,
             title: "Cross-Sector",
             description:
-              "Grid studies to portfolio analytics — knowledge that compounds",
+              "Insights that compound across wealth, energy, and beyond",
           },
           {
             icon: <Target size={24} />,
-            title: "Energy DNA",
+            title: "Quantitative DNA",
             description:
-              "Every product carries the rigour of our founding domain",
+              "Grounded in data, risk models, and analytics",
           },
         ]}
       />
@@ -142,9 +116,9 @@ const Home = () => {
           },
         ]}
         whyItems={[
-          { icon: <RefreshCw size={18} />, title: "Sustainability-first" },
+          { icon: <RefreshCw size={18} />, title: "Portfolio-first approach" },
           { icon: <Bot size={18} />, title: "AI-driven analytics" },
-          { icon: <Zap size={18} />, title: "Energy + Finance expertise" },
+          { icon: <Zap size={18} />, title: "Wealth + Energy expertise" },
           { icon: <Puzzle size={18} />, title: "Modular & scalable" },
         ]}
       />
@@ -157,9 +131,9 @@ const Home = () => {
 
       {/* CTA */}
       <CTASection
-        title="Let's Build Something"
-        titleGradient="Together"
-        description="Energy platform, wealth API, or tech partner — let's talk."
+        title="Let's Manage Your Portfolio"
+        titleGradient="Smarter"
+        description="Wealth, energy, or client portfolio — let's talk."
         primaryButton={{
           to: "/contact",
           label: "Get In Touch",

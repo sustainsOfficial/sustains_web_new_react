@@ -3,6 +3,11 @@
   background: linear-gradient(to bottom, var(--color-bg-light), var(--color-white));
 }
 
+/* Hero background image — overlay + positioning from .has-bg-image helper */
+.products-hero-bg {
+  background-image: url("/product.jpg");
+}
+
 /* Hero Section */
 .productpage-hero-section {
   padding-top: 6rem;
@@ -144,12 +149,8 @@
 
 /* Simple Products Section */
 .productpage-simple-section {
-  padding: 0rem 0;
-  background: linear-gradient(
-    to bottom right,
-    var(--color-bg-light),
-    rgba(59, 130, 246, 0.05)
-  );
+  padding: 6.5rem 0;
+  background: #ffffff;
 }
 
 .productpage-simple-wrapper {
@@ -221,6 +222,9 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   overflow: hidden;
   transition: all 0.5s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .productpage-simple-card:hover {
@@ -261,10 +265,20 @@
 
 .productpage-card-content {
   padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .productpage-card-main {
   margin-bottom: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.productpage-card-tagline {
+  flex: 1;
 }
 
 .productpage-card-title {
@@ -1003,12 +1017,8 @@
 
 /* Features Section */
 .productpage-features-section {
-  padding: 0.5rem 0 3rem;
-  background: linear-gradient(
-    to bottom right,
-    var(--color-bg-light-alt),
-    rgba(239, 246, 255, 0.3)
-  );
+  padding: 6.5rem 0;
+  background: #fafbfc;
 }
 
 .productpage-features-wrapper {
@@ -1074,6 +1084,9 @@
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .productpage-feature-card:hover {

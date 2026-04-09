@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-export function FadeIn({ children, delay = 0, direction = "up", className = "" }) {
+export function FadeIn({ children, delay = 0, direction = "up", className = "", fullHeight = false }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -16,6 +16,7 @@ export function FadeIn({ children, delay = 0, direction = "up", className = "" }
     <motion.div
       ref={ref}
       className={className}
+      style={fullHeight ? { height: "100%", display: "flex", flexDirection: "column" } : undefined}
       initial={{ opacity: 0, ...dirs[direction] }}
       animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
@@ -50,6 +51,7 @@ export function StaggerItem({ children, className = "" }) {
   return (
     <motion.div
       className={className}
+      style={{ height: "100%", display: "flex", flexDirection: "column" }}
       variants={{
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },

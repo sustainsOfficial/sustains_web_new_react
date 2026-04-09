@@ -67,17 +67,20 @@ const Contact = () => {
 
   return (
     <div className="contactpage-container">
-      <Hero
-        badge={{ icon: <MessageCircle size={16} />, text: "Get In Touch" }}
-        titleMain="Let's Talk About"
-        titleGradient="What You're Building"
-        description="Energy, wealth, tech, or just exploring — we'd love to hear from you."
-      />
+      {/* Background image extends across hero + contact methods */}
+      <div className="contact-hero-region">
+        <Hero
+          badge={{ icon: <MessageCircle size={16} />, text: "Get In Touch" }}
+          titleMain="Let's Talk About"
+          titleGradient="What You're Building"
+          description="Energy, wealth, tech, or just exploring — we'd love to hear from you."
+        />
 
-      <ContactMethodsGrid
-        methods={contactMethods}
-        onMethodClick={handleMethodClick}
-      />
+        <ContactMethodsGrid
+          methods={contactMethods}
+          onMethodClick={handleMethodClick}
+        />
+      </div>
 
       <ContactForm />
 

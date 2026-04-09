@@ -1,8 +1,46 @@
 /* ═══ Shared Hero Section ═══ */
 .shared-hero-section {
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  background: linear-gradient(to bottom right, #eff6ff, #f0fdf4, #f8fafc);
+  padding-top: 8rem;
+  padding-bottom: 7rem;
+  background: #ffffff;
+}
+
+/* ── Optional background-image helper ──
+   Add `has-bg-image` to the Hero's className along with a page-specific class
+   that sets `background-image`. Handles sizing, overlay, and z-index automatically.
+
+   Usage:
+     <Hero className="has-bg-image about-hero-bg" ... />
+
+   Then in page CSS:
+     .about-hero-bg { background-image: url("/mac/mac_2.jpg"); }
+*/
+.shared-hero-section.has-bg-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.shared-hero-section.has-bg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 90% 75% at center,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(248, 250, 252, 0.88) 45%,
+    rgba(241, 245, 249, 0.7) 80%,
+    rgba(226, 232, 240, 0.55) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.shared-hero-section.has-bg-image .shared-hero-wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .shared-hero-wrapper {
@@ -68,27 +106,37 @@
   align-items: center;
   gap: 0.5rem;
   background-color: rgba(59, 130, 246, 0.1);
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 9999px;
   color: #3b82f6;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .shared-hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  margin-top: 20px;
+  font-size: 2.75rem;
+  font-weight: 900;
+  margin-bottom: 1.25rem;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  color: #0f172a;
 }
 
 @media (min-width: 768px) {
+  .shared-hero-title { font-size: 4rem; }
+}
+
+@media (min-width: 1280px) {
   .shared-hero-title { font-size: 4.5rem; }
 }
 
 .shared-hero-title-main {
   display: block;
-  color: #111827;
+  color: #0f172a;
 }
 
 .shared-hero-title-gradient {
@@ -100,11 +148,12 @@
 }
 
 .shared-hero-description {
-  font-size: 1.25rem;
-  color: #4b5563;
-  max-width: 56rem;
-  margin: 0 auto 3rem auto;
-  line-height: 1.625;
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 40rem;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .shared-hero-buttons {
@@ -117,12 +166,14 @@
 .shared-hero-btn {
   display: inline-flex;
   align-items: center;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  font-weight: 600;
-  font-size: 1.125rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 0.8rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s ease;
 }
 
 .shared-hero-btn span {
@@ -132,26 +183,29 @@
 }
 
 .shared-hero-btn-primary {
-  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  background: #0f172a;
   color: #ffffff;
-  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+  border: 2px solid #0f172a;
+  box-shadow: 0 8px 20px -8px rgba(15, 23, 42, 0.4);
 }
 
 .shared-hero-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 40px -8px rgba(59, 130, 246, 0.4);
+  background: #1e293b;
+  border-color: #1e293b;
+  box-shadow: 0 14px 28px -10px rgba(15, 23, 42, 0.5);
 }
 
 .shared-hero-btn-secondary {
-  border: 2px solid rgba(59, 130, 246, 0.2);
-  color: #374151;
-  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  background: transparent;
 }
 
 .shared-hero-btn-secondary:hover {
-  border-color: #3b82f6;
-  color: #3b82f6;
-  background: rgba(59, 130, 246, 0.05);
+  background: #3b82f6;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* ═══ Responsive ═══ */

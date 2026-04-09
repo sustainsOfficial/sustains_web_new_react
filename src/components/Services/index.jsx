@@ -126,9 +126,10 @@ const Services = () => {
       {/* Hero */}
       <Hero
         animated
+        className="has-bg-image services-hero-bg"
         titleMain="What We Do"
-        titleGradient="Two things. Really well."
-        description="Energy consultancy and technology partnerships — rooted in deep domain expertise."
+        titleGradient="Deep Expertise. Real Results."
+        description="Energy consultancy and technology partnerships — rooted in portfolio-first thinking."
       />
 
       {/* ═══ SECTOR 1: ENERGY ORIGIN STORY + SERVICES ═══ */}
@@ -241,7 +242,7 @@ const Services = () => {
       <CTASection
         title="Let's Work"
         titleGradient="Together"
-        description="Energy project or digital growth challenge — let's talk."
+        description="Energy portfolio or digital growth challenge — let's talk."
         primaryButton={{
           to: "/contact",
           label: "Get In Touch",

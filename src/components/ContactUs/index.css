@@ -3,3 +3,57 @@
   min-height: 100vh;
   background: #ffffff;
 }
+
+/* ═══ Hero region — image spans hero + contact methods ═══ */
+.contact-hero-region {
+  position: relative;
+  background-image: url("/hero_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+/* Radial white overlay — most opaque in the middle (behind content),
+   lighter at the edges so the photo shows as ambient texture. */
+.contact-hero-region::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 95% 80% at center,
+    rgba(255, 255, 255, 0.93) 0%,
+    rgba(248, 250, 252, 0.86) 45%,
+    rgba(241, 245, 249, 0.72) 80%,
+    rgba(226, 232, 240, 0.58) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Soft fade-to-white at the bottom so the next section (ContactForm)
+   transitions cleanly without a hard image edge. */
+.contact-hero-region::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Keep hero + methods content above the overlay */
+.contact-hero-region > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make the hero and methods section backgrounds transparent so the
+   image shows through both. */
+.contact-hero-region .shared-hero-section,
+.contact-hero-region .shared-contact-methods-section {
+  background: transparent;
+}

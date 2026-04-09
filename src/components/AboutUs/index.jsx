@@ -104,9 +104,9 @@ const About = () => {
   const values = [
     {
       icon: <Brain size={32} />,
-      title: "Domain-First Thinking",
+      title: "Portfolio-First Thinking",
       description:
-        "Understand the industry first, then write the code",
+        "Understand the portfolio first, then build the platform",
     },
     {
       icon: <Shield size={32} />,
@@ -190,10 +190,11 @@ const About = () => {
     <div className="aboutpage-container">
       {/* Hero */}
       <Hero
-        badge={{ icon: <Sparkles size={16} />, text: "About Sustains.ai" }}
+        className="has-bg-image about-hero-bg"
+        badge={{ icon: <Sparkles size={16} />, text: "About Sustains" }}
         titleMain="Built by People Who"
-        titleGradient="Understand Your Industry"
-        description="Energy enthusiasts, finance experts, and technologists — building software industries actually deserve."
+        titleGradient="Think in Portfolios"
+        description="Energy analysts, wealth strategists, and technologists — building portfolio intelligence for industries that deserve it."
       >
         <div className="aboutpage-hero-stats">
           {stats.map((stat, index) => (
@@ -232,14 +233,14 @@ const About = () => {
 
           {/* Mission and Vision Row */}
           <div className="aboutpage-mission-vision-row">
-            <FadeIn direction="right">
+            <FadeIn direction="right" fullHeight>
               <div className="aboutpage-mission-card">
                 <div className="aboutpage-mission-header">
                   <h3 className="aboutpage-mission-title">Our Mission</h3>
                 </div>
                 <div className="aboutpage-mission-content">
                   <p className="aboutpage-mission-statement">
-                    Build AI-powered platforms for industries underserved by generic software.
+                    Build intelligent portfolio management platforms for industries underserved by generic software.
                   </p>
                   <p className="aboutpage-mission-description">
                     Every industry deserves software built for how it actually works — not adapted from something else.
@@ -248,15 +249,15 @@ const About = () => {
               </div>
             </FadeIn>
 
-            <FadeIn direction="left">
+            <FadeIn direction="left" fullHeight>
               <div className="aboutpage-vision-card">
                 <div className="aboutpage-vision-content">
                   <h3 className="aboutpage-vision-title">Our Vision</h3>
                   <p className="aboutpage-vision-statement">
-                    The company industries turn to when they need software that truly fits.
+                    The company industries turn to when they need portfolio intelligence that truly fits.
                   </p>
                   <p className="aboutpage-vision-description">
-                    Intelligent tools with enterprise-grade care — designed for how real practitioners work.
+                    Intelligent portfolio tools with enterprise-grade care — designed for how real practitioners work.
                   </p>
                 </div>
               </div>
@@ -360,7 +361,7 @@ const About = () => {
       {/* CTA */}
       <CTASection
         title="Want to Work With Us?"
-        description="Product, tech partner, or energy consulting — let's talk."
+        description="Portfolio platform, tech partner, or energy consulting — let's talk."
         primaryButton={{
           to: "/products",
           label: "Explore Our Products",
